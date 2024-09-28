@@ -1,0 +1,15 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* <!-- -------------------FAQ SECTION ---------------- --> */
+.faq-question {
+  transition: background-color 0.3s;
+}
+.faq-question:hover {
+  background-color: #d4af37; /* Golden hover color */
+}
+
+/* -----------------AGE VERIFICATION -------------*/

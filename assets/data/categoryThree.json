@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Fryd Chocolate Bars",
+    "brand": "Presidential",
+    "price": "$8 ",
+    "thc": "885.31 MG",
+    "cbd": "4.07 MG",
+    "type": "HYBRID",
+    "image": "./assets/images/bosky.jfif"
+  },
+  {
+    "name": "1.8G - Pineapple Breeze",
+    "brand": "Greenline",
+    "price": "$17.00",
+    "thc": "34.27%",
+    "cbd": "0.14%",
+    "type": "SATIVA",
+    "image": "./assets/images/rove.jfif"
+  },
+  {
+    "name": "Lemon Cherry ZwirL",
+    "brand": "Revelry",
+    "price": "$28.00",
+    "thc": "25.66%",
+    "cbd": "0.08%",
+    "type": "INDICA-HYBRID",
+    "image": "./assets/images/logo.JPG"
+  },
+  {
+    "name": "Peanut Butter Cups",
+    "brand": "Revelry",
+    "price": "$28.00",
+    "thc": "23.07%",
+    "cbd": "0.06%",
+    "type": "HYBRID",
+    "image": "./assets/images/edibles-1.jfif"
+  },
+  {
+    "name": "Sonoma Berry CBD 20:1",
+    "brand": "Country Cannabis",
+    "price": "$30.00",
+    "thc": "0.69%",
+    "cbd": "17.48%",
+    "type": "CBD",
+    "image": "./assets/images/kanha.jfif"
+  },
+  {
+    "name": "2PK - Pod - Sativa Infused",
+    "brand": "OOKA",
+    "price": "$65.00",
+    "thc": "5.02%",
+    "type": "SATIVA",
+    "image": "./assets/images/rove1.jfif"
+  },
+  {
+    "name": "Peanut Butter Cups",
+    "brand": "Revelry",
+    "price": "$28.00",
+    "thc": "23.07%",
+    "cbd": "0.06%",
+    "type": "HYBRID",
+    "image": "./assets/images/edibles-1.jfif"
+  },
+  {
+    "name": "Moon Rocks - Gorilla Goo",
+    "brand": "Presidential",
+    "price": "$30.00",
+    "thc": "885.31 MG",
+    "cbd": "4.07 MG",
+    "type": "HYBRID",
+    "image": "./assets/images/logo.JPG"
+  },
+  {
+    "name": "2PK - Pod - Sativa Infused",
+    "brand": "OOKA",
+    "price": "$65.00",
+    "thc": "5.02%",
+    "type": "SATIVA",
+    "image": "./assets/images/rove1.jfif"
+  }
+]

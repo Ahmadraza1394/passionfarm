@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce Website</title>
 
+    <!-- JAVASCRIPT FILE -->
+    <!-- STYLES CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./assets/js/script.js"></script>
 
     <!-- Poppins Font -->
     <link
@@ -19,53 +23,63 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    </style>
   </head>
 
-  <body class="bg-white text-gray-800">
+  <body class="bg-white text-gray-800 ">
     <!-------------------- NAVBAR -------------------------->
-    <!-- NAVBAR -->
+
     <nav
       id="navbar"
-      class="bg-black text-white flex items-center justify-between fixed max-w-full w-full z-50 top-0"
+      class="navbar bg-black text-white flex items-center justify-between fixed max-w-full w-full z-50 top-0"
     >
       <!-- Hamburger Icon (For Mobile View) -->
       <div class="flex items-center space-x-4">
         <button
-          class="text-white focus:outline-none ml-4 transition-all duration-500 ease-in-out"
+          class="menu-button text-white focus:outline-none ml-4 transition-all duration-500 ease-in-out"
           id="menu-button"
         >
-          <i class="fas fa-2x fa-bars" id="hamburger-icon"></i>
+          <i class="fas fa-2x fa-bars hamburger-icon" id="hamburger-icon" ></i>
         </button>
       </div>
 
       <!-- Logo -->
       <div>
-        <img src="./assets/images/logo.JPG" alt="Logo" class="h-24 w-24" />
+        <img src="./assets/images/logo.JPG" alt="Logo" class="h-20 w-20" />
       </div>
 
-      <!-- Search Icon () -->
-      <div class="">
-        <i class="fas fa-search text-white fa-2x mr-4"></i>
+      <!-- Search Input -->
+
+      <div class="relative">
+        <!-- Search Icon -->
+        <button id="search-toggle" class="search-toggletext-white mr-7 focus:outline-none">
+          <i class="fas fa-search fa-2x"></i>
+        </button>
+
+        <!-- Search Input (Initially hidden) -->
+        <div
+          id="search-input"
+          class="absolute right-8 top-0 mt-12 ml-2 w-64 hidden md:w-80"
+        >
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full pl-10 pr-4 py-2 rounded-lg border text-black border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+          />
+          <i
+            class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+          ></i>
+        </div>
       </div>
     </nav>
 
     <!-- Mobile Menu (Hidden by default) -->
     <div
       id="mobile-menu"
-      class="hidden fixed inset-0 bg-black text-white z-40 flex-col i transition-all duration-1000 ease-in-out max-w-full w-full"
+      class=" mobile-menu hidden fixed inset-0 bg-black text-white z-40 flex-col i transition-all duration-1000 ease-in-out max-w-full w-full"
     >
       <!-- Close Icon (Hidden initially, shown when the menu is open) -->
       <button
-        class="absolute top-10 left-96 text-white text-2xl focus:outline-none"
+        class="absolute top-10 left-96 text-white text-2xl focus:outline-none close-button"
         id="close-button"
       >
         <i class="fas fa-2x fa-times"></i>
@@ -80,57 +94,51 @@
       <ul class="text-3xl space-y-6 ml-10 relative md:text-2xl">
         <!-- Menu item with dropdown -->
         <li class="relative group">
-          <a href="#" class="hover:text-yellow-500 transition-colors">Shop</a>
+          <a href="/" class="hover:text-yellow-500 transition-colors">Shop</a>
           <!-- Dropdown Menu -->
           <ul
             class="-mt-10 ml-36 w-48 bg-black text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out group-hover:block absolute left-0"
           >
             <li>
               <a
-                href="#"
+                href="/"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
-                >Category 1</a
+                >Bulk Flower</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="/"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
-                >Category 2</a
+                >Disposable</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="/"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
-                >Category 3</a
+                >Edibles </a
               >
             </li>
-            <li>
-              <a
-                href="#"
-                class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
-                >Category 4</a
-              >
-            </li>
+           
           </ul>
         </li>
         <!-- Remaining Menu Items -->
         <li>
-          <a href="#" class="hover:text-yellow-500 transition-colors"
+          <a href="./assets/pages/about.html" class="hover:text-yellow-500 transition-colors"
             >About Us</a
           >
         </li>
         <li>
-          <a href="#" class="hover:text-yellow-500 transition-colors">FAQ</a>
+          <a href="#faq" class="hover:text-yellow-500 transition-colors">FAQ</a>
         </li>
         <li>
-          <a href="#" class="hover:text-yellow-500 transition-colors"
+          <a href="./assets/pages/chat.html" class="hover:text-yellow-500 transition-colors"
             >Group Chat</a
           >
         </li>
         <li>
-          <a href="#" class="hover:text-yellow-500 transition-colors"
+          <a href="./assets/pages/contact.html" class="hover:text-yellow-500 transition-colors"
             >Contact Us</a
           >
         </li>
@@ -151,7 +159,7 @@
       </div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Content -->
 
     <div
       class="flex flex-col items-center justify-center h-auto w-full mt-36 mb-12 text-center p-4 md:p-8 lg:p-16"
@@ -166,124 +174,10 @@
         high-quality cannabis products in San Francisco.
       </p>
     </div>
-    <!---------------HEADER SECTION ------------------ -->
-    <section>
-      <!-- Header Section with Border -->
-      <header class="bg-gray-100 border-b border-gray-300 mb-16">
-        <nav
-          class="flex flex-wrap justify-between items-center px-6 py-4 w-full"
-        >
-          <!-- Left Navigation Links -->
-          <div class="flex flex-wrap space-x-8 items-center">
-            <a href="#" class="hover:text-gray-700 text-sm md:text-base"
-              >Home</a
-            >
-
-            <!-- Categories Dropdown -->
-            <div class="relative group">
-              <a
-                href="#"
-                class="hover:text-gray-700 flex items-center text-sm md:text-base"
-              >
-                Categories <i class="fas fa-chevron-down ml-1"></i>
-              </a>
-
-              <!-- Dropdown Menu -->
-              <div
-                class="absolute left-0 hidden w-40 bg-white shadow-lg border rounded-lg group-hover:block group-focus-within:block transition ease-out duration-300 z-20"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-sm md:text-base"
-                  >Category 1</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-sm md:text-base"
-                  >Category 2</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-sm md:text-base"
-                  >Category 3</a
-                >
-              </div>
-            </div>
-
-            <a href="#" class="hover:text-gray-700 text-sm md:text-base"
-              >Shop</a
-            >
-          </div>
-
-          <!-- Right Section (Open status, Menu, Login, Cart) -->
-          <div
-            class="flex flex-wrap items-center space-x-4 md:space-x-6 mt-4 md:mt-0"
-          >
-            <!-- Open status -->
-            <div
-              class="flex items-center space-x-1 text-green-600 text-xs md:text-sm"
-            >
-              <i class="fas fa-info-circle"></i>
-              <span>OPEN</span>
-              <span class="text-gray-500 ml-2 md:ml-4">Delivery + Pickup</span>
-            </div>
-
-            <!-- Medical Menu Dropdown -->
-            <div class="relative group">
-              <a
-                href="#"
-                class="hover:text-gray-700 flex items-center text-xs md:text-sm lg:text-base"
-              >
-                MENU Medical <i class="fas fa-chevron-down ml-1"></i>
-              </a>
-
-              <!-- Dropdown Menu -->
-              <div
-                class="absolute right-0 hidden w-40 bg-white shadow-lg border rounded-lg group-hover:block group-focus-within:block transition ease-out duration-300 z-20"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-xs md:text-sm lg:text-base"
-                  >Option 1</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-xs md:text-sm lg:text-base"
-                  >Option 2</a
-                >
-              </div>
-            </div>
-
-            <!-- Login Icon -->
-            <a
-              href="#"
-              class="hover:text-gray-700 flex items-center text-xs md:text-sm"
-            >
-              <i class="fas fa-user"></i> <span class="ml-1">Login</span>
-            </a>
-
-            <!-- Cart Icon -->
-            <a
-              href="#"
-              class="hover:text-gray-700 flex items-center relative text-xs md:text-sm"
-            >
-              <i class="fas fa-shopping-cart text-yellow-600"></i>
-              <span class="ml-1">1</span>
-            </a>
-          </div>
-        </nav>
-      </header>
-
-      <!-- Notification Bar -->
-      <div
-        class="bg-orange-100 text-center py-2 text-sm md:py-3 md:text-4xl text-gray-600"
-      >
-        ALL PRICES ARE TAX INCLUDED
-      </div>
-    </section>
+  
 
     <!-----------------------------CATEGORY SECTION  ------------------>
-    <section class="bg-gray-100 p-8">
+    <section  class="bg-gray-100 p-8">
       <!-- Carousel Container -->
       <div class="relative max-w-full overflow-hidden">
         <!-- Carousel Items -->
@@ -299,7 +193,7 @@
                 alt="Tinctures"
                 class="mx-auto w-20 h-20 mb-4"
               />
-              <h3 class="text-lg font-semibold">Tinctures</h3>
+              <h3 class="text-lg font-semibold">Bulk Flowers</h3>
             </div>
           </div>
 
@@ -311,7 +205,7 @@
                 alt="Pre-Rolls"
                 class="mx-auto w-20 h-20 mb-4"
               />
-              <h3 class="text-lg font-semibold">Pre-Rolls</h3>
+              <h3 class="text-lg font-semibold">Disposable</h3>
             </div>
           </div>
 
@@ -323,7 +217,7 @@
                 alt="Vaporizers"
                 class="mx-auto w-20 h-20 mb-4"
               />
-              <h3 class="text-lg font-semibold">Vaporizers</h3>
+              <h3 class="text-lg font-semibold">Edibles</h3>
             </div>
           </div>
 
@@ -404,86 +298,13 @@
       </div>
     </section>
 
-    <script>
-      const carouselItems = document.getElementById("carousel-items");
-      const nextBtn = document.getElementById("nextBtn");
-      const prevBtn = document.getElementById("prevBtn");
-
-      const totalItems = document.querySelectorAll(
-        "#carousel-items > div"
-      ).length;
-      const itemWidth = document.querySelector(
-        "#carousel-items > div"
-      ).offsetWidth;
-      let currentIndex = 1; // Start at the real first item
-      const totalVisibleItems = 5; // Adjust based on how many visible items at once
-
-      // Initialize carousel to show the first real item (skip the duplicated first item)
-      carouselItems.style.transform = `translateX(-${
-        currentIndex * itemWidth
-      }px)`;
-
-      nextBtn.addEventListener("click", () => {
-        if (currentIndex < totalItems - 1) {
-          currentIndex++;
-          carouselItems.style.transform = `translateX(-${
-            currentIndex * itemWidth
-          }px)`;
-        }
-
-        // If it's the last duplicated item, reset to the first real item
-        if (currentIndex === totalItems - 1) {
-          setTimeout(() => {
-            carouselItems.style.transition = "none"; // Disable smooth transition
-            currentIndex = 1; // Jump to the real first item
-            carouselItems.style.transform = `translateX(-${
-              currentIndex * itemWidth
-            }px)`;
-            setTimeout(() => {
-              carouselItems.style.transition = "transform 0.5s ease-in-out"; // Re-enable smooth transition
-            }, 50); // Small delay to avoid a flicker
-          }, 500); // Wait for the animation to finish
-        }
-      });
-
-      prevBtn.addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          carouselItems.style.transform = `translateX(-${
-            currentIndex * itemWidth
-          }px)`;
-        }
-
-        // If it's the first duplicated item, reset to the last real item
-        if (currentIndex === 0) {
-          setTimeout(() => {
-            carouselItems.style.transition = "none"; // Disable smooth transition
-            currentIndex = totalItems - 2; // Jump to the last real item
-            carouselItems.style.transform = `translateX(-${
-              currentIndex * itemWidth
-            }px)`;
-            setTimeout(() => {
-              carouselItems.style.transition = "transform 0.5s ease-in-out"; // Re-enable smooth transition
-            }, 50); // Small delay to avoid a flicker
-          }, 500); // Wait for the animation to finish
-        }
-      });
-
-      // Ensure responsive adjustment when window resizes
-      window.addEventListener("resize", () => {
-        carouselItems.style.transform = `translateX(-${
-          currentIndex * itemWidth
-        }px)`;
-      });
-    </script>
-
-    <!-----------------------PRODUCT SECTION -------------------- -->
+    <!-----------------------PRODUCT CATEGORY1 SECTION -------------------- -->
     <section class="bg-white p-6 relative">
       <!-- Carousel Container -->
       <div class="relative max-w-full overflow-hidden">
-        <h2 class="text-2xl font-bold mb-4">Popular Flower</h2>
+        <h2 class="text-2xl font-bold mb-4">Bulk Flower</h2>
         <div
-          id="carousel-items1"
+          id="carouselItems1"
           class="flex transition-transform duration-500 ease-in-out"
         >
           <!-- Product Cards will be injected here from the JSON file -->
@@ -506,162 +327,609 @@
         </button>
       </div>
     </section>
-    <!-- JSON file for products -->
-    <script>
-      const productData = [
-        {
-          name: "Moon Rocks - Gorilla Goo",
-          brand: "Presidential",
-          price: "$30.00",
-          thc: "885.31 MG",
-          cbd: "4.07 MG",
-          type: "HYBRID",
-          image: "./assets/images/logo.JPG",
-        },
-        {
-          name: "1.8G - Pineapple Breeze",
-          brand: "Greenline",
-          price: "$17.00",
-          thc: "34.27%",
-          cbd: "0.14%",
-          type: "SATIVA",
-          image: "./assets/images/rove1.jfif",
-        },
-        {
-          name: "Lemon Cherry ZwirL",
-          brand: "Revelry",
-          price: "$28.00",
-          thc: "25.66%",
-          cbd: "0.08%",
-          type: "INDICA-HYBRID",
-          image: "./assets/images/bosky.jfif",
-        },
-        {
-          name: "Peanut Butter Cups",
-          brand: "Revelry",
-          price: "$28.00",
-          thc: "23.07%",
-          cbd: "0.06%",
-          type: "HYBRID",
-          image: "./assets/images/edibles-1.jfif",
-        },
-        {
-          name: "Sonoma Berry CBD 20:1",
-          brand: "Country Cannabis",
-          price: "$30.00",
-          thc: "0.69%",
-          cbd: "17.48%",
-          type: "CBD",
-          image: "./assets/images/kanha.jfif",
-        },
-        {
-          name: "2PK - Pod - Sativa Infused",
-          brand: "OOKA",
-          price: "$65.00",
-          thc: "5.02%",
-          type: "SATIVA",
-          image: "./assets/images/rove.jfif",
-        },
-        {
-          name: "Peanut Butter Cups",
-          brand: "Revelry",
-          price: "$28.00",
-          thc: "23.07%",
-          cbd: "0.06%",
-          type: "HYBRID",
-          image: "./assets/images/edibles-1.jfif",
-        },
-      ];
 
-      const carouselItems1 = document.getElementById("carousel-items1");
+    <!-----------------------PRODUCT CATEGORY2 SECTION -------------------- -->
+    <section class="bg-white p-6 relative">
+      <!-- Carousel Container -->
+      <div class="relative max-w-full overflow-hidden">
+        <h2 class="text-2xl font-bold mb-4">Disposable </h2>
+        <div
+          id="carouselItems2"
+          class="flex transition-transform duration-500 ease-in-out"
+        >
+          <!-- Product Cards will be injected here from the JSON file -->
+        </div>
+      </div>
 
-      // Inject product data into the carousel
-      function loadProducts(products) {
-        products.forEach((product) => {
-          const productCard = `
-            <div class="w-96 md:w-1/6 p-4 flex-none">
-              <div class="bg-gray-100 rounded-lg shadow-md p-6  flex flex-col h-full">
-                <div class="mb-4">
-                    <img src="${product.image}" alt="${product.name}" class="mx-auto w-20 h-20 object-contain">
-                    </div>
-                    <p class=" font-bold text-orange-600 mb-4">${product.price}</p>
-                <h3 class=" font-bold mb-2">${product.name}</h3>
-                <p class="text-gray-500 mb-1">${product.brand}</p>
-                <p class="text-sm text-gray-700 mb-4">${product.type} • THC: ${product.thc} • CBD: ${product.cbd}</p>
-                <div class="mt-auto">
-                  <button class="bg-orange-100 hover:bg-orange-500 text-yellow-600 py-2 px-2 rounded-lg transition-colors duration-300">
-                    ADD TO CART
-                  </button>
-                </div>
+      <!-- Navigation Buttons -->
+      <div class="absolute inset-0 flex justify-between items-center px-4">
+        <button
+          id="prevBtn2"
+          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
+        >
+          &#8592;
+        </button>
+        <button
+          id="nextBtn2"
+          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
+        >
+          &#8594;
+        </button>
+      </div>
+    </section>
+
+    <!-----------------------PRODUCT CATEGORY3 SECTION -------------------- -->
+    <section class="bg-white p-6 relative">
+      <!-- Carousel Container -->
+      <div class="relative max-w-full overflow-hidden">
+        <h2 class="text-2xl font-bold mb-4">Edibles </h2>
+        <div
+          id="carouselItems3"
+          class="flex transition-transform duration-500 ease-in-out"
+        >
+          <!-- Product Cards will be injected here from the JSON file -->
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="absolute inset-0 flex justify-between items-center px-4">
+        <button
+          id="prevBtn3"
+          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
+        >
+          &#8592;
+        </button>
+        <button
+          id="nextBtn3"
+          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
+        >
+          &#8594;
+        </button>
+      </div>
+    </section>
+
+    <!--------------------GET IN TOUCH  -------------------->
+    <section class="min-h-screen md:p-6 w-full">
+      <!-- Container for the whole layout -->
+      <div
+        class="bg-gradient-to-r from-orange-50 to-orange-200 w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-10 items-start shadow-md rounded-lg"
+      >
+        <!-- Left Section: Location and Info -->
+        <div class="ml-0 md:ml-20">
+          <!-- Logo and Title -->
+          <img
+            src="./assets/images/logo.JPG"
+            alt="Cannabis Club Logo"
+            class="w-28 mb-6 ml-0 md:ml-20"
+          />
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-800 mt-6 ml-0 md:ml-20"
+          >
+            Visit Mission <br />
+            <span class="text-[#b8945f]">Passion Farm</span>
+          </h1>
+
+          <!-- Address and Contact Info -->
+          <div class="mt-8 ml-0 md:ml-20">
+            <div class="flex items-start gap-2">
+              <i class="fas fa-map-marker-alt text-[#b8945f] text-2xl"></i>
+              <div>
+                <p class="font-semibold text-xl">Mission Passion Farm</p>
+                <p>
+                  2441 Mission Street,<br />
+                  San Francisco, CA 94110
+                </p>
+                <p>
+                  Email:
+                  <a
+                    href="mailto:info@missioncannabisclub.com"
+                    class="text-[#b8945f]"
+                    >info@missioncannabisclub.com</a
+                  >
+                </p>
+                <p>
+                  Phone:
+                  <a href="tel:+14159709333" class="text-[#b8945f]"
+                    >(415) 970-9333</a
+                  >
+                </p>
               </div>
             </div>
-            `;
-          carouselItems1.innerHTML += productCard;
-        });
-      }
+          </div>
 
-      loadProducts(productData);
+          <!-- Social Media Icons -->
+          <div class="flex gap-4 mt-6 ml-0 md:ml-20">
+            <!-- Yelp -->
+            <a href="#" class="bg-[#b8945f] text-white p-2 rounded-full">
+              <i class="fab fa-yelp fa-lg"></i>
+            </a>
+            <!-- Google Plus -->
+            <a href="#" class="bg-[#b8945f] text-white p-2 rounded-full">
+              <i class="fab fa-google fa-lg"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="#" class="bg-[#b8945f] text-white p-2 rounded-full">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
 
-      // Carousel Navigation
-      const nextBtn1 = document.getElementById("nextBtn1");
-      const prevBtn1 = document.getElementById("prevBtn1");
-      let currentIndex1 = 0;
-      const totalItems1 = productData.length;
-      const cardWidth = document.querySelector(".md\\:w-1\\/6").offsetWidth; // Get card width dynamically
+        <!-- Right Section: Contact Form -->
+        <div class="bg-transparent p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-bold text-[#b8945f]">Get in Touch</h2>
+          </div>
+          <p class="text-gray-700 mb-6">
+            Do you have a question or need some help? Reach out to us and we
+            will get back to you.
+          </p>
+          <form action="#" method="POST" class="space-y-4">
+            <div>
+              <label for="name" class="block text-gray-600"
+                >Your Name (required)</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-gray-600"
+                >Your Email (required)</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              />
+            </div>
+            <div>
+              <label for="subject" class="block text-gray-600">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              />
+            </div>
+            <div>
+              <label for="message" class="block text-gray-600"
+                >Your Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="2"
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full md:w-32 p-3 bg-[#b8945f] text-white font-semibold rounded-full hover:bg-[#a47b4e]"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-      nextBtn1.addEventListener("click", () => {
-        if (currentIndex1 < totalItems1 - 1) {
-          currentIndex1++;
-        } else {
-          currentIndex1 = 0; // Loop back to the first item
-        }
-        carouselItems1.style.transform = `translateX(-${
-          currentIndex1 * cardWidth
-        }px)`;
-      });
+    <!-------------------GALLERY SECTION  ------------------>
+    <section class="max-w-6xl mx-auto p-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img
+          src="./assets/images/gallery (5).jpg"
+          alt="Image 1"
+          class="cursor-pointer rounded-lg shadow-lg"
+          onclick="openImageModal(this)"
+        />
+        <img
+          src="./assets/images/gallery (2).jpg"
+          alt="Image 2"
+          class="cursor-pointer rounded-lg shadow-lg"
+          onclick="openImageModal(this)"
+        />
+        <img
+          src="./assets/images/gallery (3).jpg"
+          alt="Image 3"
+          class="cursor-pointer rounded-lg shadow-lg"
+          onclick="openImageModal(this)"
+        />
+        <img
+          src="./assets/images/gallery (4).jpg"
+          alt="Image 4"
+          class="cursor-pointer rounded-lg shadow-lg"
+          onclick="openImageModal(this)"
+        />
+        <img
+          src="./assets/images/gallery (5).jpg"
+          alt="Image 5"
+          class="cursor-pointer rounded-lg shadow-lg"
+          onclick="openImageModal(this)"
+        />
+        <img
+          src="./assets/images/gallery (4).jpg"
+          alt="Image 6"
+          class="cursor-pointer rounded-lg shadow-lg"
+          onclick="openImageModal(this)"
+        />
+      </div>
 
-      prevBtn1.addEventListener("click", () => {
-        if (currentIndex1 > 0) {
-          currentIndex1--;
-        } else {
-          currentIndex1 = totalItems1 - 1; // Loop back to the last item
-        }
-        carouselItems1.style.transform = `translateX(-${
-          currentIndex1 * cardWidth
-        }px)`;
-      });
+      <!-- Modal for displaying larger image -->
+      <div
+        id="imageModal"
+        class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 hidden"
+        onclick="closeImageModal()"
+      >
+        <img
+          id="modalImage"
+          class="max-w-3xl max-h-screen rounded-lg shadow-lg"
+        />
+      </div>
+    </section>
 
-      // Ensure the carousel adjusts properly on window resize
-      window.addEventListener("resize", () => {
-        carouselItems1.style.transform = `translateX(-${
-          currentIndex1 * cardWidth
-        }px)`;
-      });
-    </script>
+    <!------------------- FAQ SECTION --------------------->
+    <section id="faq" class="max-w-6xl mx-auto p-4 mt-10">
+      <h2 class="text-5xl font-bold text-center mb-6">
+        Frequently Asked Questions <span class="text-[#b8945f]">(FAQs)</span>
+      </h2>
+      <p class="text-center text-blue-950 mb-8">
+        Here are some common questions about our location, services, and
+        amenities.
+      </p>
 
-    <!-- For hamburger -->
+      <!-- FAQ Item 1 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-[#b8945f] text-white rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(1)"
+        >
+          <span class="font-semibold">1. Where is Passion Farms located?</span>
+          <span class="faq-icon">⌃</span>
+        </button>
+        <div
+          id="faq1"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          Our address is 2441 Mission Street, San Francisco, CA 94110, USA.
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(2)"
+        >
+          <span class="font-semibold">2. What are your contact details?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq2"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          You can contact us via phone at (123) 456-7890 or email at
+          info@missioncannabis.com.
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">3. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 4 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">4. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 5 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">5. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 6 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">6. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 7 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">.7 What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 8 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">8. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------AGE VERIFICATION POPUP ------------------->
+
+
+    <div
+      id="ageModal"
+      class="fixed inset-0 flex items-center justify-center overlay z-50"
+    >
+      <div
+        class="bg-black p-6 rounded-lg shadow-lg w-11/12 md:w-1/3 text-center"
+      >
+        <!-- Logo Section -->
+        <img
+          src="./assets/images/logo.JPG"
+          alt="Cannabis Club Logo"
+          class="w-20 mx-auto mb-1"
+        />
+        <h1 class="text-4xl text-[#d3a04c] font-bold mb-4">Passion Farms
+
+        <!-- Age Verification Text -->
+        <h2 class="text-lg text-white font-semibold mb-6">
+          Are you over 21 years of age?
+        </h2>
+
+        <!-- Buttons for Yes/No -->
+        <div class="flex justify-center space-x-4">
+          <button
+            id="yesButton"
+            class="py-3 px-6 bg-gray-800 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-700"
+          >
+            Yes
+          </button>
+          <button
+            id="noButton"
+            class="py-3 px-6 bg-gray-800 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-700"
+          >
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="contentWrapper"></div>
+    <!-- Content Wrapper -->
+
+
     <script>
-      const menuButton = document.getElementById("menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const navbar = document.getElementById("navbar");
-      const hamburgerIcon = document.getElementById("hamburger-icon");
-      const closeButton = document.getElementById("close-button");
+      window.onload = function () {
+        const ageModal = document.getElementById("ageModal");
+        const contentWrapper = document.getElementById("contentWrapper");
+        const body = document.body;
 
-      // Toggle mobile menu and hide/show navbar
-      menuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        navbar.classList.toggle("hidden"); // Hide the navbar when mobile menu is open
-        hamburgerIcon.classList.toggle("fa-bars");
-        hamburgerIcon.classList.toggle("fa-times");
-      });
+        // Show the age verification modal
+        ageModal.classList.remove("hidden");
 
-      // Close menu when clicking the cross button
-      closeButton.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        navbar.classList.remove("hidden"); // Show the navbar when mobile menu is closed
-        hamburgerIcon.classList.add("fa-bars");
-        hamburgerIcon.classList.remove("fa-times");
-      });
+        // Event listener for 'Yes' button
+        document.getElementById("yesButton").addEventListener("click", () => {
+          ageModal.classList.add("hidden");
+          contentWrapper.classList.remove("blur");
+          body.classList.remove("blur");
+        });
+
+        // Event listener for 'No' button
+        document.getElementById("noButton").addEventListener("click", () => {
+          ageModal.classList.add("hidden");
+          contentWrapper.classList.add("blur");
+          body.classList.add("blur");
+          contentWrapper.innerHTML =
+            '<h2 class="text-3xl font-bold text-center mt-10 text-red-500">Access Denied</h2>';
+        });
+      };
     </script>
+
+    <style>
+      .blur {
+        filter: blur(8px);
+        pointer-events: none;
+      }
+      .overlay {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+
+    <!-- Chat Icon (Floating at Bottom Right) -->
+<a
+href="./assets/pages/chat.html"
+class="fixed bottom-5 right-5 bg-gray-700 text-white p-4 rounded-full shadow-lg hover:bg-gray-900 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300"
+aria-label="Open Chat"
+>
+<i class="fas fa-comment-dots text-2xl"></i>
+</a>
+
+
+    <!----------------------FOOTER SECTION --------------------->
+    <footer class="bg-black text-white py-12">
+      <div class="max-w-7xl mx-auto px-6 md:px-8">
+        <!-- Sign up section -->
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-semibold mb-4">
+            Sign up for Discounts & Updates
+          </h2>
+          <div class="flex justify-center items-center space-x-4">
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              class="w-64 py-3 px-4 rounded-full bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+            />
+            <button
+              class="py-3 px-8 bg-[#d4af37] text-black rounded-full font-semibold"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-gray-700 mb-8" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Cannabis Club Info -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Passion</h3>
+            <p class="mb-4">
+              With three dispensaries and a convenient delivery service
+              operating in San Francisco, we make it easy for you to choose your
+              preferred shopping destination or enjoy the convenience of home
+              delivery.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+              <a href="#"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                  alt="Facebook"
+                  class="w-8 h-8"
+              /></a>
+              <a href="#"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+                  alt="Twitter"
+                  class="w-8 h-8"
+              /></a>
+              <a href="#"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                  alt="Instagram"
+                  class="w-8 h-8"
+              /></a>
+            </div>
+          </div>
+
+          <!-- Passion Farms Address -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Passion Farms Address</h3>
+            <p>
+              2441 Mission St,<br />San Francisco, CA 94110<br />
+              C10-0000437-LIC
+            </p>
+            <p class="mt-4">
+              <a href="mailto:info@missioncannabisclub.com" class="underline"
+                >info@passionfarms.com</a
+              >
+            </p>
+            <p class="mt-2">
+              <a href="tel:+14159709333" class="underline"
+                >+1 (415) 970-WEED(9333)</a
+              >
+            </p>
+          </div>
+
+          <!-- Passion Farms Address -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Passion Farms</h3>
+            <p>
+              2424 Polk Street,<br />San Francisco, CA 94109, USA<br />
+              C10-0001191-LIC
+            </p>
+            <p class="mt-4">
+              <a
+                href="mailto:info@russianhillcannabisclub.com"
+                class="underline"
+                >info@russianhillcannabisclub.com</a
+              >
+            </p>
+            <p class="mt-2">
+              <a href="tel:+14158008033" class="underline">+1 (415) 800-8033</a>
+            </p>
+          </div>
+
+          <!-- App Download Links -->
+          <!-- Important Links Section -->
+          <div class="text-center mb-8">
+            <h3 class="text-xl font-semibold mb-4">Shop Now</h3>
+            <div class="space-y-4">
+              <a href="/" class="block text-lg text-white hover:underline"
+                >Home</a
+              >
+              <a
+                href="/about-us"
+                class="block text-lg text-white hover:underline"
+                >About Us</a
+              >
+              <a
+                href="/contact-us"
+                class="block text-lg text-white hover:underline"
+                >Contact Us</a
+              >
+              <a href="/shop" class="block text-lg text-white hover:underline"
+                >Shop</a
+              >
+              <a href="/chat" class="block text-lg text-white hover:underline"
+                >Chat</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

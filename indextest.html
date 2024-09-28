@@ -167,81 +167,107 @@
       </p>
     </div>
 
-    <!-------------------------- Header Section ------------------------------->
-
+    <!---------------HEADER SECTION ------------------ -->
     <section>
+      <!-- Header Section with Border -->
       <header class="bg-gray-100 border-b border-gray-300 mb-16">
-        <nav class="flex justify-between items-center px-6 py-4 w-full">
+        <nav
+          class="flex flex-wrap justify-between items-center px-6 py-4 w-full"
+        >
           <!-- Left Navigation Links -->
-          <div class="flex space-x-8 items-center">
-            <a href="#" class="hover:text-gray-700">Home</a>
+          <div class="flex flex-wrap space-x-8 items-center">
+            <a href="#" class="hover:text-gray-700 text-sm md:text-base"
+              >Home</a
+            >
 
             <!-- Categories Dropdown -->
             <div class="relative group">
-              <a href="#" class="hover:text-gray-700 flex items-center">
+              <a
+                href="#"
+                class="hover:text-gray-700 flex items-center text-sm md:text-base"
+              >
                 Categories <i class="fas fa-chevron-down ml-1"></i>
               </a>
+
+              <!-- Dropdown Menu -->
               <div
-                class="absolute left-0 hidden mt-2 w-40 bg-white shadow-md border group-hover:block"
+                class="absolute left-0 hidden w-40 bg-white shadow-lg border rounded-lg group-hover:block group-focus-within:block transition ease-out duration-300 z-20"
               >
                 <a
                   href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-sm md:text-base"
                   >Category 1</a
                 >
                 <a
                   href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-sm md:text-base"
                   >Category 2</a
                 >
                 <a
                   href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-sm md:text-base"
                   >Category 3</a
                 >
               </div>
             </div>
 
-            <a href="#" class="hover:text-gray-700 flex items-center"> Shop </a>
+            <a href="#" class="hover:text-gray-700 text-sm md:text-base"
+              >Shop</a
+            >
           </div>
 
           <!-- Right Section (Open status, Menu, Login, Cart) -->
-          <div class="flex items-center space-x-6">
+          <div
+            class="flex flex-wrap items-center space-x-4 md:space-x-6 mt-4 md:mt-0"
+          >
             <!-- Open status -->
-            <div class="flex items-center space-x-1 text-green-600">
+            <div
+              class="flex items-center space-x-1 text-green-600 text-xs md:text-sm"
+            >
               <i class="fas fa-info-circle"></i>
               <span>OPEN</span>
-              <span class="text-gray-500 ml-4">Delivery + Pickup</span>
+              <span class="text-gray-500 ml-2 md:ml-4">Delivery + Pickup</span>
             </div>
 
             <!-- Medical Menu Dropdown -->
             <div class="relative group">
-              <a href="#" class="hover:text-gray-700 flex items-center">
+              <a
+                href="#"
+                class="hover:text-gray-700 flex items-center text-xs md:text-sm lg:text-base"
+              >
                 MENU Medical <i class="fas fa-chevron-down ml-1"></i>
               </a>
+
+              <!-- Dropdown Menu -->
               <div
-                class="absolute right-0 hidden mt-2 w-40 bg-white shadow-md border group-hover:block"
+                class="absolute right-0 hidden w-40 bg-white shadow-lg border rounded-lg group-hover:block group-focus-within:block transition ease-out duration-300 z-20"
               >
                 <a
                   href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-xs md:text-sm lg:text-base"
                   >Option 1</a
                 >
                 <a
                   href="#"
-                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  class="block px-4 py-2 text-gray-600 hover:bg-gray-100 focus:bg-gray-100 text-xs md:text-sm lg:text-base"
                   >Option 2</a
                 >
               </div>
             </div>
 
             <!-- Login Icon -->
-            <a href="#" class="hover:text-gray-700 flex items-center">
+            <a
+              href="#"
+              class="hover:text-gray-700 flex items-center text-xs md:text-sm"
+            >
               <i class="fas fa-user"></i> <span class="ml-1">Login</span>
             </a>
 
             <!-- Cart Icon -->
-            <a href="#" class="hover:text-gray-700 flex items-center relative">
+            <a
+              href="#"
+              class="hover:text-gray-700 flex items-center relative text-xs md:text-sm"
+            >
               <i class="fas fa-shopping-cart text-yellow-600"></i>
               <span class="ml-1">1</span>
             </a>
@@ -250,7 +276,9 @@
       </header>
 
       <!-- Notification Bar -->
-      <div class="bg-orange-100 text-center py-3 text-4xl text-gray-600">
+      <div
+        class="bg-orange-100 text-center py-2 text-sm md:py-3 md:text-4xl text-gray-600"
+      >
         ALL PRICES ARE TAX INCLUDED
       </div>
     </section>
@@ -304,7 +332,7 @@
           <div class="w-full md:w-1/5 flex-none p-4">
             <div class="bg-white rounded-lg shadow-md p-6 text-center">
               <img
-                src="./assets/images/logo.JPG"
+                src="./assets/images/"
                 alt="Edibles"
                 class="mx-auto w-20 h-20 mb-4"
               />
@@ -755,7 +783,6 @@
     </script>
 
     <!-- -------------------FAQ SECTION ---------------- -->
-
     <style>
       .faq-question {
         transition: background-color 0.3s;
@@ -829,28 +856,6 @@
         </div>
       </div>
     </section>
-
-    <!-- JavaScript for FAQ toggle -->
-    <script>
-      function toggleFAQ(faqNumber) {
-        const answer = document.getElementById("faq" + faqNumber);
-        const otherAnswers = document.querySelectorAll(".faq-answer");
-        const icon = answer.previousElementSibling.querySelector(".faq-icon");
-        const isOpen = !answer.classList.contains("hidden");
-
-        // Close all answers
-        otherAnswers.forEach((answer) => answer.classList.add("hidden"));
-
-        // Toggle the clicked answer
-        if (isOpen) {
-          answer.classList.add("hidden");
-          icon.textContent = "⌄"; // Arrow down
-        } else {
-          answer.classList.remove("hidden");
-          icon.textContent = "⌃"; // Arrow up
-        }
-      }
-    </script>
 
     <!-- Footer Section -->
     <footer class="bg-black text-white py-12">

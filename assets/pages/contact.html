@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Poppins Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/styles.css" />
+
+    <script defer src="../js/script.js"></script>
+  </head>
+  <style>
+    .bg-cover-custom {
+      background-image: url("../images/contact.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+  <body>
+    <!-------------------- NAVBAR -------------------------->
+
+    <nav
+      id="navbar"
+      class="navbar bg-black text-white flex items-center justify-between fixed max-w-full w-full z-50 top-0"
+    >
+      <!-- Hamburger Icon (For Mobile View) -->
+      <div class="flex items-center space-x-4">
+        <button
+          class="menu-button text-white focus:outline-none ml-4 transition-all duration-500 ease-in-out"
+          id="menu-button"
+        >
+          <i class="fas fa-2x fa-bars hamburger-icon" id="hamburger-icon"></i>
+        </button>
+      </div>
+
+      <!-- Logo -->
+      <div>
+        <img src="../images/logo.JPG" alt="Logo" class="h-20 w-20" />
+      </div>
+
+      <!-- Search Input -->
+
+      <div class="relative">
+        <!-- Search Icon -->
+        <button
+          id="search-toggle"
+          class="search-toggletext-white mr-7 focus:outline-none"
+        >
+          <i class="fas fa-search fa-2x"></i>
+        </button>
+
+        <!-- Search Input (Initially hidden) -->
+        <div
+          id="search-input"
+          class="absolute right-8 top-0 mt-12 ml-2 w-64 hidden md:w-80"
+        >
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full pl-10 pr-4 py-2 rounded-lg border text-black border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+          />
+          <i
+            class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+          ></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu hidden fixed inset-0 bg-black text-white z-40 flex-col i transition-all duration-1000 ease-in-out max-w-full w-full"
+    >
+      <!-- Close Icon (Hidden initially, shown when the menu is open) -->
+      <button
+        class="absolute top-10 left-96 text-white text-2xl focus:outline-none close-button"
+        id="close-button"
+      >
+        <i class="fas fa-2x fa-times"></i>
+      </button>
+
+      <!-- Logo Centered -->
+      <div class="mb-8 mt-5 ml-10">
+        <img src="../images/logo.JPG" alt="Logo" class="h-16 w-16" />
+      </div>
+
+      <!-- Mobile Menu Links -->
+      <ul class="text-3xl space-y-6 ml-10 relative md:text-2xl">
+        <!-- Menu item with dropdown -->
+        <li class="relative group">
+          <a href="/" class="hover:text-yellow-500 transition-colors">Shop</a>
+          <!-- Dropdown Menu -->
+          <ul
+            class="-mt-10 ml-36 w-48 bg-black text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out group-hover:block absolute left-0"
+          >
+            <li>
+              <a
+                href="/"
+                class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
+                >Bulk Flower</a
+              >
+            </li>
+            <li>
+              <a
+                href="/"
+                class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
+                >Disposable</a
+              >
+            </li>
+            <li>
+              <a
+                href="/"
+                class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
+                >Edibles
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Remaining Menu Items -->
+        <li>
+          <a href="about.html" class="hover:text-yellow-500 transition-colors"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a href="/" class="hover:text-yellow-500 transition-colors">FAQ</a>
+        </li>
+        <li>
+          <a
+            href="../pages/chat.html"
+            class="hover:text-yellow-500 transition-colors"
+            >Group Chat</a
+          >
+        </li>
+        <li>
+          <a
+            href="../pages/contact.html"
+            class="hover:text-yellow-500 transition-colors"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+
+      <!-- Search Bar -->
+      <div class="mt-8 ml-5">
+        <div class="flex items-center bg-white rounded-full p-2 w-72">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full p-2 text-black rounded-l-full focus:outline-none"
+          />
+          <button class="bg-yellow-500 text-white p-2 rounded-full">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------ABOUT US SECTION --------------- -->
+    <section class="bg-cover-custom h-64 md:h-96 lg:h-[500px] relative">
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center"
+      >
+        <h1 class="text-3xl md:text-5xl font-bold text-white">Contact Us</h1>
+        <nav class="mt-2">
+          <ol class="flex space-x-2 text-white text-sm md:text-base">
+            <li><a href="../../index.html" class="hover:underline">Home</a></li>
+            <li>•</li>
+            <li>Contact Us</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!--------------------CONTACT US SECTION  --------------------->
+    <!-- Link to Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <section class="bg-white py-12">
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white shadow-md p-8 rounded-lg"
+        >
+          <!-- Left Column: Contact Details -->
+          <div>
+            <h2 class="text-5xl font-bold text-gray-900">We are Here.</h2>
+            <h3 class="text-4xl font-semibold font-mono text-[#b8945f] mt-2">
+              Get in Touch with Us
+            </h3>
+            <p class="mt-4 text-lg text-gray-600">
+              Get in touch to discuss your employee wellbeing needs today.
+              Please give us a call, drop us an email or fill out the contact
+              form and we’ll get back to you.
+            </p>
+
+            <!-- Locations -->
+            <div class="mt-8">
+              <h3 class="text-lg font-semibold text-gray-800">Our Locations</h3>
+              <ul class="space-y-4 mt-4">
+                <li class="flex items-start">
+                  <div class="p-2 rounded-full">
+                    <i class="fas fa-2x fa-map-marker-alt text-[#b8945f]"></i>
+                  </div>
+                  <div class="ml-3">
+                    <strong>Mission Cannabis Club</strong><br />
+                    2441 Mission Street, San Francisco, CA 94110, USA
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="p-2 rounded-full text-white">
+                    <i class="fas fa-2x fa-map-marker-alt"></i>
+                  </div>
+                  <div class="ml-3">
+                    <strong>Russian Hill Cannabis Club</strong><br />
+                    2424 Polk Street, San Francisco, CA 94109, USA
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="p-2 rounded-full text-white">
+                    <i class="fas fa-2x fa-map-marker-alt"></i>
+                  </div>
+                  <div class="ml-3">
+                    <strong>Union Cannabis Club</strong><br />
+                    2030 Union Street, San Francisco, CA 94123, USA
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="mt-8">
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <div class="p-2 rounded-full text-white">
+                    <i class="fas fa-2x fa-envelope text-[#b8945f]"></i>
+                  </div>
+                  <div class="ml-3">
+                    <strong>Email:</strong><br />
+                    info@missioncannabisclub.com
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="p-2 rounded-full text-white">
+                    <i class="fas fa-2x fa-phone-alt text-[#b8945f]"></i>
+                  </div>
+                  <div class="ml-3">
+                    <strong>Phone:</strong><br />
+                    +1(415) 970-WEED (9333)
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <div>
+            <form class="bg-white p-8 rounded-lg shadow-md">
+              <h3 class="text-4xl font-semibold text-gray-900 mb-6">
+                Reach out to us
+              </h3>
+
+              <div class="mb-4">
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700"
+                  >Your Name (required)</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full p-3 border rounded-full bg-slate-100 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700"
+                  >Your Email (required)</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full p-3 border rounded-full bg-slate-100 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div class="mb-4">
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-700"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full p-3 border rounded-full bg-slate-100 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700"
+                  >Your Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full p-3 border rounded-3xl bg-slate-100 focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="bg-[#b8945f] text-white py-4 px-8 rounded-full hover:bg-[#d6a254] focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------- FAQ SECTION --------------------->
+    <section id="faq" class="max-w-6xl mx-auto p-4 mt-10">
+      <h2 class="text-5xl font-bold text-center mb-6">
+        Frequently Asked Questions <span class="text-[#b8945f]">(FAQs)</span>
+      </h2>
+      <p class="text-center text-blue-950 mb-8">
+        Here are some common questions about our location, services, and
+        amenities.
+      </p>
+
+      <!-- FAQ Item 1 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-[#b8945f] text-white rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(1)"
+        >
+          <span class="font-semibold">1. Where is Passion Farms located?</span>
+          <span class="faq-icon">⌃</span>
+        </button>
+        <div
+          id="faq1"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          Our address is 2441 Mission Street, San Francisco, CA 94110, USA.
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(2)"
+        >
+          <span class="font-semibold">2. What are your contact details?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq2"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          You can contact us via phone at (123) 456-7890 or email at
+          info@missioncannabis.com.
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">3. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 4 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">4. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 5 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">5. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 6 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">6. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 7 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">.7 What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+      <!-- FAQ Item 8 -->
+      <div class="mb-4">
+        <button
+          class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
+          onclick="toggleFAQ(3)"
+        >
+          <span class="font-semibold">8. What are your operating hours?</span>
+          <span class="faq-icon">⌄</span>
+        </button>
+        <div
+          id="faq3"
+          class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
+        >
+          We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
+        </div>
+      </div>
+    </section>
+
+    <!----------------------FOOTER SECTION --------------------->
+    <footer class="bg-black text-white py-12">
+      <div class="max-w-7xl mx-auto px-6 md:px-8">
+        <!-- Sign up section -->
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-semibold mb-4">
+            Sign up for Discounts & Updates
+          </h2>
+          <div class="flex justify-center items-center space-x-4">
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              class="w-64 py-3 px-4 rounded-full bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+            />
+            <button
+              class="py-3 px-8 bg-[#d4af37] text-black rounded-full font-semibold"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-gray-700 mb-8" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Cannabis Club Info -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Passion</h3>
+            <p class="mb-4">
+              With three dispensaries and a convenient delivery service
+              operating in San Francisco, we make it easy for you to choose your
+              preferred shopping destination or enjoy the convenience of home
+              delivery.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+              <a href="#"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                  alt="Facebook"
+                  class="w-8 h-8"
+              /></a>
+              <a href="#"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+                  alt="Twitter"
+                  class="w-8 h-8"
+              /></a>
+              <a href="#"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                  alt="Instagram"
+                  class="w-8 h-8"
+              /></a>
+            </div>
+          </div>
+
+          <!-- Passion Farms Address -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Passion Farms Address</h3>
+            <p>
+              2441 Mission St,<br />San Francisco, CA 94110<br />
+              C10-0000437-LIC
+            </p>
+            <p class="mt-4">
+              <a href="mailto:info@missioncannabisclub.com" class="underline"
+                >info@passionfarms.com</a
+              >
+            </p>
+            <p class="mt-2">
+              <a href="tel:+14159709333" class="underline"
+                >+1 (415) 970-WEED(9333)</a
+              >
+            </p>
+          </div>
+
+          <!-- Passion Farms Address -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Passion Farms</h3>
+            <p>
+              2424 Polk Street,<br />San Francisco, CA 94109, USA<br />
+              C10-0001191-LIC
+            </p>
+            <p class="mt-4">
+              <a
+                href="mailto:info@russianhillcannabisclub.com"
+                class="underline"
+                >info@russianhillcannabisclub.com</a
+              >
+            </p>
+            <p class="mt-2">
+              <a href="tel:+14158008033" class="underline">+1 (415) 800-8033</a>
+            </p>
+          </div>
+
+          <!-- App Download Links -->
+          <!-- Important Links Section -->
+          <div class="text-center mb-8">
+            <h3 class="text-xl font-semibold mb-4">Shop Now</h3>
+            <div class="space-y-4">
+              <a href="/" class="block text-lg text-white hover:underline"
+                >Home</a
+              >
+              <a
+                href="/about-us"
+                class="block text-lg text-white hover:underline"
+                >About Us</a
+              >
+              <a
+                href="/contact-us"
+                class="block text-lg text-white hover:underline"
+                >Contact Us</a
+              >
+              <a href="/shop" class="block text-lg text-white hover:underline"
+                >Shop</a
+              >
+              <a href="/chat" class="block text-lg text-white hover:underline"
+                >Chat</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // <!------------------  SEARCH INPUT IN NAVBAR --------------------------->
+      document
+        .getElementById("search-toggle")
+        .addEventListener("click", function () {
+          const searchInput = document.getElementById("search-input");
+          searchInput.classList.toggle("hidden");
+        });
+
+      // <!-- ---------------FOR HAMBURGER SECTION --------------------->
+      const menuButton = document.querySelector(".menu-button");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const navbar = document.querySelector(".navbar");
+      const hamburgerIcon = document.querySelector(".hamburger-icon");
+      const closeButton = document.querySelector(".close-button");
+
+      // Toggle mobile menu and hide/show navbar
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        navbar.classList.toggle("hidden"); // Hide the navbar when mobile menu is open
+        hamburgerIcon.classList.toggle("fa-bars");
+        hamburgerIcon.classList.toggle("fa-times");
+      });
+
+      // Close menu when clicking the cross button
+      closeButton.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        navbar.classList.remove("hidden"); // Show the navbar when mobile menu is closed
+        hamburgerIcon.classList.add("fa-bars");
+        hamburgerIcon.classList.remove("fa-times");
+      });
+    </script>
+  </body>
+</html>

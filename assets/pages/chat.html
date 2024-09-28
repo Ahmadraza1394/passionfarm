@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 h-screen overflow-hidden">
+    <!-- Main Chat Container -->
+    <div class="flex h-screen">
+      <!-- Sidebar (Contacts) -->
+      <div class="hidden md:block w-1/4 bg-white shadow-lg">
+        <div
+          class="p-4 bg-gray-900 text-white text-center text-xl font-semibold"
+        >
+          Contacts
+        </div>
+        <div
+          id="contact-list"
+          class="overflow-y-auto h-full bg-gray-900 p-4 space-y-4"
+        >
+          <!-- Contacts will be dynamically loaded here -->
+        </div>
+      </div>
+
+      <!-- Main Chat Area -->
+      <div class="flex-1 flex flex-col bg-white shadow-lg">
+        <!-- Chat Header -->
+        <div
+          id="chat-header"
+          class="p-4 flex items-center justify-between bg-gray-900 text-white shadow-lg"
+        >
+          <!-- Chat header will be dynamically updated -->
+        </div>
+
+        <!-- Chat Messages -->
+        <div
+          id="message-area"
+          class="flex-1 p-4 overflow-y-auto space-y-4 bg-gray-50"
+        >
+          <!-- Chat messages will be dynamically loaded here -->
+        </div>
+
+        <!-- Message Input Area -->
+        <div class="p-4 bg-gray-900 border-t flex items-center space-x-3">
+          <button
+            class="mr-4 text-gray-500 hover:text-gray-700 transition duration-150"
+          >
+            <i class="fas fa-paperclip"></i>
+          </button>
+          <input
+            id="message-input"
+            type="text"
+            class="flex-1 p-2 rounded-full border focus:outline-none focus:ring focus:ring-blue-300"
+            placeholder="Type a message..."
+          />
+          <button
+            id="send-button"
+            class="ml-2 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 transition duration-150"
+          >
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for Dynamic Behavior -->
+    <script>
+      // Sample data for contacts
+      const contacts = [
+        {
+          name: "John Doe",
+          lastMessage: "Hey, how's it going?",
+          avatar: "../images/logo.JPG",
+          isOnline: true,
+        },
+        {
+          name: "Jane Smith",
+          lastMessage: "I'll send it later.",
+          avatar: "../images/bosky.jfif",
+          isOnline: false,
+        },
+        {
+          name: "Ahmad",
+          lastMessage: "I'll send it later.",
+          avatar: "../images/img.png",
+          isOnline: true,
+        },
+        {
+          name: "Ali",
+          lastMessage: "I'll send it later.",
+          avatar: "https://via.placeholder.com/150",
+          isOnline: false,
+        },
+      ];
+
+      // Sample messages for selected user
+      let messages = [
+        {
+          sender: "John Doe",
+          content: "Hey! Are you available for the meeting tomorrow?",
+          time: "12:45 PM",
+        },
+        {
+          sender: "Me",
+          content: "Yes, I'll be there at 10 AM!",
+          time: "12:47 PM",
+        },
+      ];
+
+      // Load contacts dynamically
+      const contactList = document.getElementById("contact-list");
+      contacts.forEach((contact) => {
+        const contactItem = document.createElement("div");
+        contactItem.classList.add(
+          "flex",
+          "items-center",
+          "bg-gray-100",
+          "p-3",
+          "border-b", // Adds bottom border for separation
+          "hover:bg-gray-300",
+          "cursor-pointer",
+          "rounded-lg",
+          "transition",
+          "duration-150",
+          "ease-in-out",
+          "focus:outline-none", // Accessibility: remove default focus outline
+          "focus:ring-2", // Adds focus ring for keyboard navigation
+          "focus:ring-blue-400"
+        );
+        contactItem.innerHTML = `
+    <img class="w-12 h-12 rounded-full object-cover" src="${
+      contact.avatar
+    }" alt="${contact.name}">
+    <div class="ml-4 flex-1">
+      <p class="text-sm font-semibold text-gray-800">${contact.name}</p>
+      <p class="text-xs text-gray-500 truncate">${contact.lastMessage}</p>
+    </div>
+    <span class="text-xs text-green-500 ${
+      contact.isOnline ? "block" : "hidden"
+    }">Online</span>
+  `;
+        contactItem.addEventListener("click", () => loadChat(contact));
+        contactList.appendChild(contactItem);
+      });
+
+      // Load chat header and messages
+      const chatHeader = document.getElementById("chat-header");
+      const messageArea = document.getElementById("message-area");
+
+      function loadChat(contact) {
+        // Update header
+        chatHeader.innerHTML = `
+    <div class="flex items-center space-x-4">
+      <img class="w-12 h-12 rounded-full object-cover" src="${
+        contact.avatar
+      }" alt="${contact.name}">
+      <div>
+        <p class="text-lg font-semibold text-white">${contact.name}</p>
+        <p class="text-sm text-gray-200">${
+          contact.isOnline ? "Online" : "Offline"
+        }</p>
+      </div>
+    </div>
+    <div class="flex space-x-4 items-center">
+      <i class="fas fa-phone-alt cursor-pointer hover:text-gray-300 transition duration-150"></i>
+      <i class="fas fa-video cursor-pointer hover:text-gray-300 transition duration-150"></i>
+      <i class="fas fa-ellipsis-v cursor-pointer hover:text-gray-300 transition duration-150"></i>
+    </div>
+  `;
+
+        // Load messages
+        messageArea.innerHTML = "";
+        messages.forEach((msg) => {
+          const messageItem = document.createElement("div");
+          messageItem.classList.add(
+            msg.sender === "Me" ? "flex justify-end" : "flex items-start"
+          );
+          messageItem.innerHTML = `
+      <div class="${
+        msg.sender === "Me"
+          ? "bg-blue-600 text-white"
+          : "bg-gray-200 text-black"
+      } p-3 rounded-lg max-w-xs md:max-w-md lg:max-w-lg shadow-md">
+        <p class="text-sm">${msg.content}</p>
+        <p class="text-xs text-gray-400 mt-1 text-right">${msg.time}</p>
+      </div>
+    `;
+          messageArea.appendChild(messageItem);
+        });
+      }
+
+      // Sending a new message
+      const messageInput = document.getElementById("message-input");
+      const sendButton = document.getElementById("send-button");
+
+      sendButton.addEventListener("click", () => {
+        const newMessage = messageInput.value.trim();
+        if (newMessage) {
+          const messageItem = document.createElement("div");
+          messageItem.classList.add("flex", "justify-end");
+
+          messageItem.innerHTML = `
+  <div class="bg-gray-900 text-white p-2 rounded-2xl max-w-xs md:max-w-md lg:max-w-lg shadow-lg">
+  <p class="text-base leading-relaxed">${newMessage}</p>
+  <p class="text-xs text-gray-300 mt-2 text-right opacity-80">${new Date().toLocaleTimeString(
+    [],
+    { hour: "2-digit", minute: "2-digit" }
+  )}</p>
+</div>
+
+  `;
+
+          messageArea.appendChild(messageItem);
+          messageInput.value = ""; // Clear input after sending
+
+          // Scroll to the bottom smoothly
+          messageArea.scrollTo({
+            top: messageArea.scrollHeight,
+            behavior: "smooth",
+          });
+        }
+      });
+
+      // Load initial chat
+      loadChat(contacts[0]);
+    </script>
+  </body>
+</html>
