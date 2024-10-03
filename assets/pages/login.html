@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Login/Sign-up UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center bg-white justify-center min-h-screen">
+    <section class="min-h-screen md:p-6 w-full">
+      <!-- Container for the whole layout -->
+      <div
+        class="bg-gradient-to-r from-orange-50 to-orange-200 w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-4 items-start shadow-md rounded-lg"
+      >
+        <!-- Left Section: Location and Info -->
+        <div class="ml-0 md:ml-20">
+          <!-- Logo and Title -->
+          <img
+            src="../images/logo.JPG"
+            alt="Cannabis Club Logo"
+            class="w-28 mb-6 ml-0 md:ml-20"
+          />
+          <h1
+            class="text-4xl md:text-5xl font-bold text-gray-800 mt-6 ml-0 md:ml-20"
+          >
+            Visit Mission <br />
+            <span class="text-[#b8945f]">Passion Farm</span>
+          </h1>
+
+          <!-- Address and Contact Info -->
+          <div class="mt-8 ml-0 md:ml-20">
+            <div class="flex items-start gap-2">
+              <i class="fas fa-map-marker-alt text-[#b8945f] text-2xl"></i>
+              <div>
+                <p class="font-semibold text-xl">Mission Passion Farm</p>
+                <p>
+                  2441 Mission Street,<br />
+                  San Francisco, CA 94110
+                </p>
+                <p>
+                  Email:
+                  <a
+                    href="mailto:info@missioncannabisclub.com"
+                    class="text-[#b8945f]"
+                    >info@missioncannabisclub.com</a
+                  >
+                </p>
+                <p>
+                  Phone:
+                  <a href="tel:+14159709333" class="text-[#b8945f]"
+                    >(415) 970-9333</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="flex gap-4 mt-6 ml-0 md:ml-20">
+            <!-- Yelp -->
+            <a href="" class="bg-[#b8945f] text-white p-2 rounded-full">
+              <i class="fab fa-yelp fa-lg"></i>
+            </a>
+            <!-- Google Plus -->
+            <a href="" class="bg-[#b8945f] text-white p-2 rounded-full">
+              <i class="fab fa-google fa-lg"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="" class="bg-[#b8945f] text-white p-2 rounded-full">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Section: Login/Signup Form -->
+        <div class="bg-transparent p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-bold text-[#b8945f]" id="signInText"></h2>
+          </div>
+
+          <p class="text-gray-700 mb-6">
+            Do you have a question or need some help? Reach out to us and we
+            will get back to you.
+          </p>
+
+          <!-- Login Form -->
+          <form id="loginForm" action="#" method="POST" class="space-y-4">
+            <div>
+              <label for="loginEmail" class="block text-gray-600"
+                >Email (required)</label
+              >
+              <input
+                type="email"
+                id="loginEmail"
+                name="email"
+                required
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              />
+            </div>
+            <div>
+              <label for="loginPassword" class="block text-gray-600"
+                >Password (required)</label
+              >
+              <input
+                type="password"
+                id="loginPassword"
+                name="password"
+                required
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full md:w-32 p-3 bg-[#b8945f] text-white font-semibold rounded-full hover:bg-[#a47b4e]"
+            >
+              Login
+            </button>
+          </form>
+
+          <!-- Signup Form (Initially Hidden) -->
+          <form
+            id="signupForm"
+            action="#"
+            method="POST"
+            class="space-y-4 hidden"
+          >
+            <div>
+              <label for="signupName" class="block text-gray-600"
+                >Your Name (required)</label
+              >
+              <input
+                type="text"
+                id="signupName"
+                name="name"
+                required
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              />
+            </div>
+            <div>
+              <label for="signupEmail" class="block text-gray-600"
+                >Email (required)</label
+              >
+              <input
+                type="email"
+                id="signupEmail"
+                name="email"
+                required
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              />
+            </div>
+            <div>
+              <label for="signupPassword" class="block text-gray-600"
+                >Password (required)</label
+              >
+              <input
+                type="password"
+                id="signupPassword"
+                name="password"
+                required
+                class="w-full md:w-80 p-3 border border-gray-300 rounded-full focus:outline-none focus:border-[#b8945f]"
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full md:w-32 p-3 bg-[#b8945f] text-white font-semibold rounded-full hover:bg-[#a47b4e]"
+            >
+              Signup
+            </button>
+          </form>
+          <div class="flex justify-start ml-2 my-4">
+            <button id="toggleForm" class="text-sm text-gray-600">
+              Switch to Signup
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Toggle between login and signup forms
+      const toggleFormButton = document.getElementById("toggleForm");
+      const loginForm = document.getElementById("loginForm");
+      const signupForm = document.getElementById("signupForm");
+      const signIn = document.getElementById("signInText");
+
+      // Add underline and color for toggle button
+      toggleFormButton.classList.add("text-blue-400");
+      toggleFormButton.classList.add("underline");
+
+      // Initialize the text content
+      signIn.innerHTML = "Sign In"; // Set the default text when the page loads
+
+      toggleFormButton.addEventListener("click", () => {
+        if (loginForm.classList.contains("hidden")) {
+          // If login is hidden, show it and switch text to Sign In
+          loginForm.classList.remove("hidden");
+          signupForm.classList.add("hidden");
+          toggleFormButton.textContent = "Switch to Signup";
+          signIn.innerHTML = "Sign In"; // Ensure Sign In is set
+        } else {
+          // If signup is hidden, show it and switch text to Sign Up
+          loginForm.classList.add("hidden");
+          signupForm.classList.remove("hidden");
+          signIn.innerHTML = "Sign Up"; // Switch to Sign Up text
+          toggleFormButton.innerHTML = "Switch to Login";
+        }
+      });
+    </script>
+  </body>
+</html>
