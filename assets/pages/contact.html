@@ -16,8 +16,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/styles.css" />
-
-    <script defer src="../js/script.js"></script>
   </head>
   <style>
     .bg-cover-custom {
@@ -404,13 +402,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(4)"
         >
           <span class="font-semibold">4. What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq4"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -420,13 +418,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(5)"
         >
           <span class="font-semibold">5. What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq5"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -436,13 +434,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(6)"
         >
           <span class="font-semibold">6. What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq6"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -452,13 +450,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(7)"
         >
           <span class="font-semibold">.7 What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq7"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -468,13 +466,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(8)"
         >
           <span class="font-semibold">8. What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq8"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -637,6 +635,12 @@
         hamburgerIcon.classList.add("fa-bars");
         hamburgerIcon.classList.remove("fa-times");
       });
+
+      // for faq
+      function toggleFAQ(index) {
+        const faq = document.getElementById(`faq${index}`);
+        faq.classList.toggle("hidden");
+      }
     </script>
   </body>
 </html>

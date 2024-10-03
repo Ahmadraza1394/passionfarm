@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>bulk Flower</title>
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -30,7 +30,7 @@
       background-repeat: no-repeat;
     }
   </style>
-  <body>
+  <body class="bg-gray-100">
     <!-------------------- NAVBAR -------------------------->
 
     <nav
@@ -58,11 +58,22 @@
         <!-- Search Icon -->
         <button
           id="search-toggle"
-          class="search-toggletext-white mr-7 focus:outline-none"
+          class="search-toggletext-white mr-4 focus:outline-none"
         >
           <i class="fas fa-search fa-2x"></i>
         </button>
+        <!-- <div class="relative"> -->
+        <!-- Cart Icon -->
+        <button id="cart-btn" class="relative mr-7 focus:outline-none">
+          <i class="fas fa-shopping-cart fa-2x text-white"></i>
+          <span
+            id="cart-count"
+            class="absolute top-0 right-0 bg-yellow-500 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center"
+            >0</span
+          >
+        </button>
 
+        <!-- </div> -->
         <!-- Search Input (Initially hidden) -->
         <div
           id="search-input"
@@ -102,28 +113,30 @@
       <ul class="text-3xl space-y-6 ml-10 relative md:text-2xl">
         <!-- Menu item with dropdown -->
         <li class="relative group">
-          <a href="/" class="hover:text-yellow-500 transition-colors">Shop</a>
+          <a href="edibles.html" class="hover:text-yellow-500 transition-colors"
+            >Shop</a
+          >
           <!-- Dropdown Menu -->
           <ul
             class="-mt-10 ml-36 w-48 bg-black text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out group-hover:block absolute left-0"
           >
             <li>
               <a
-                href="/"
+                href="bulkFlower.html"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
                 >Bulk Flower</a
               >
             </li>
             <li>
               <a
-                href="/"
+                href="disposable.html"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
                 >Disposable</a
               >
             </li>
             <li>
               <a
-                href="/"
+                href="edibles.html"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
                 >Edibles
               </a>
@@ -132,7 +145,7 @@
         </li>
         <!-- Remaining Menu Items -->
         <li>
-          <a href="about.html" class="hover:text-yellow-500 transition-colors"
+          <a href="./about.html" class="hover:text-yellow-500 transition-colors"
             >About Us</a
           >
         </li>
@@ -140,15 +153,13 @@
           <a href="/" class="hover:text-yellow-500 transition-colors">FAQ</a>
         </li>
         <li>
-          <a
-            href="../pages/chat.html"
-            class="hover:text-yellow-500 transition-colors"
+          <a href="./chat.html" class="hover:text-yellow-500 transition-colors"
             >Group Chat</a
           >
         </li>
         <li>
           <a
-            href="../pages/contact.html"
+            href="./contact.html"
             class="hover:text-yellow-500 transition-colors"
             >Contact Us</a
           >
@@ -170,249 +181,51 @@
       </div>
     </div>
 
-    <!-------------------ABOUT US SECTION --------------- -->
-    <section class="bg-cover-custom h-64 md:h-96 lg:h-[500px] relative">
-      <div
-        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center"
-      >
-        <h1 class="text-3xl md:text-5xl font-bold text-white">About Us</h1>
-        <nav class="mt-2">
-          <ol class="flex space-x-2 text-white text-sm md:text-base">
-            <li><a href="../../index.html" class="hover:underline">Home</a></li>
-            <li>•</li>
-            <li>About Us</li>
-          </ol>
-        </nav>
-      </div>
-    </section>
-
-    <!--------------------Experience  ------------------->
-    <!-- Responsive Section with Image and Text -->
-    <section class="container mx-auto my-10 px-4 py-10">
-      <div
-        class="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-8"
-      >
-        <!-- Left Side: Image -->
-        <div class="w-full lg:w-1/2">
-          <img
-            src="../images/gallery (3).jpg"
-            alt="Cannabis Store"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
-          />
-        </div>
-
-        <!-- Right Side: Text Content -->
-        <div class="w-full lg:w-1/2 text-center lg:text-left">
-          <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-loose">
-            Elevating the Passion Farms Experience in
-            <span class="text-[#b8945f]">San Francisco</span>
-          </h1>
-          <p
-            class="mt-4 text-gray-700 text-sm md:text-base lg:text-lg leading-loose my-3"
-          >
-            With three dispensaries and a convenient delivery service operating
-            in San Francisco. Welcome to Mission Cannabis Club, Russian Hill
-            Cannabis Club, and Union Cannabis Club, where cannabis enthusiasts
-            and newcomers alike gather to explore the world of cannabis in the
-            vibrant heart of San Francisco, California. As a premier cannabis
-            dispensary and lounge, we are committed to offering a diverse and
-            high-quality selection of cannabis products to cater to the
-            discerning tastes and varying needs of our valued customers.
-          </p>
-          <div
-            class="mt-6 flex items-center justify-center lg:justify-start space-x-4"
-          >
-            <img
-              src="../images/img.png"
-              alt="Al Shawa"
-              class="w-12 h-12 rounded-full"
-            />
-            <div>
-              <p class="font-semibold text-sm">Al Shawa</p>
-              <p class="text-gray-500 text-xs">Company Owner</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--------------------What we Offers  ------------------------->
-
-    <section class="container mx-auto px-4 py-12">
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center"
-      >
-        <!-- Card 1: 3 Locations -->
-        <div class="p-6 bg-white shadow-lg rounded-lg">
-          <div class="flex justify-center mb-4">
-            <div class="bg-gold-light rounded-full p-4">
-              <i class="fas fa-map-marker-alt text-[#b8945f] text-3xl"></i>
-            </div>
-          </div>
-          <h2 class="text-xl font-semibold mb-2">3 Locations</h2>
-          <p class="text-gray-600 text-center">
-            Explore our three conveniently located dispensaries in San Francisco
-            for easy access to premium cannabis products.
-          </p>
-        </div>
-
-        <!-- Card 2: Pickup or Delivery -->
-        <div class="p-6 bg-white shadow-lg rounded-lg">
-          <div class="flex justify-center mb-4">
-            <div class="bg-gold-light rounded-full p-4">
-              <i class="fas fa-shopping-cart text-[#b8945f] text-3xl"></i>
-            </div>
-          </div>
-          <h2 class="text-xl font-semibold mb-2">Pickup or Delivery</h2>
-          <p class="text-gray-600 text-center">
-            Enjoy the convenience of our cannabis delivery service, bringing
-            quality products directly to your home.
-          </p>
-        </div>
-
-        <!-- Card 3: Quality Cannabis -->
-        <div class="p-6 bg-white shadow-lg rounded-lg">
-          <div class="flex justify-center mb-4">
-            <div class="bg-gold-light rounded-full p-4">
-              <i class="fas fa-cannabis text-[#b8945f] text-3xl"></i>
-            </div>
-          </div>
-          <h2 class="text-xl font-semibold mb-2">Quality Cannabis</h2>
-          <p class="text-gray-600 text-center">
-            Discover the finest quality cannabis products meticulously curated
-            to ensure a superior and satisfying experience.
-          </p>
-        </div>
-
-        <!-- Card 4: Special Deals -->
-        <div class="p-6 bg-white shadow-lg rounded-lg">
-          <div class="flex justify-center mb-4">
-            <div class="bg-gold-light rounded-full p-4">
-              <i class="fas fa-tag text-[#b8945f] text-3xl"></i>
-            </div>
-          </div>
-          <h2 class="text-xl font-semibold mb-2">Special Deals</h2>
-          <p class="text-gray-600 text-center">
-            Check out our daily deals and exclusive offers to maximize your
-            value while enjoying top-notch cannabis.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-----------OUR MISSION SECTION --------- -->
-    <section
-      class="min-h-screen p-3 bg-gradient-to-r from-orange-50 to-orange-200 w-full"
+    <!--=====================Edibles Categories Section ======================= -->
+    <!-- Sidebar Cart -->
+    <div
+      id="cart-sidebar"
+      class="fixed z-50 right-0 top-0 w-80 bg-gradient-to-b from-white via-gray-100 to-gray-200 h-full shadow-2xl transform translate-x-full transition-transform"
     >
-      <!-- Container for the whole layout -->
-      <div class="w-full mx-auto p-10">
-        <!-- Title and Logo -->
-        <div class="text-center mb-10">
-          <img
-            src="../images/logo.JPG"
-            alt="Cannabis Club Logo"
-            class="w-28 mx-auto mb-4"
-          />
-          <h1 class="text-5xl font-bold text-gray-800">
-            Our Mission at <span class="text-[#b8945f]">Cannabis Club</span>
-          </h1>
-        </div>
-
-        <!-- Content Section: Main Content and Side Panels -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <!-- Main Content -->
-          <div class="lg:col-span-2 bg-transparent p-6 rounded-lg">
-            <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-              Founded by passionate cannabis enthusiasts, Mission Cannabis Club
-              is more than just a dispensary; it’s a complete experience. We
-              take pride in creating a welcoming, safe, and engaging lounge
-              environment where patrons can relax, socialize, and savor their
-              chosen cannabis products. We firmly believe that cannabis use is
-              an enlightening and shared experience, and we are dedicated to
-              fostering a community that values the nuances of this incredible
-              plant.
-            </p>
-            <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-              All our products undergo lab testing to ensure full compliance
-              with California’s strict cannabis standards.
-            </p>
-            <!-- Learn more button -->
-            <div class="text-left">
-              <a
-                href="#"
-                class="inline-block px-6 py-3 bg-[#b8945f] text-white font-semibold rounded-full hover:bg-[#a47b4e] transition duration-300"
-              >
-                Learn more
-              </a>
-            </div>
+      <div class="p-4 relative">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-2">
+          Your Cart
+        </h2>
+        <button
+          id="close-cart"
+          class="absolute top-4 right-4 w-8 h-8 text-gray-500 hover:text-gray-700 transition-colors"
+        >
+          <!-- Font Awesome cross icon -->
+          <i class="fas fa-times fa-2x"></i>
+        </button>
+        <ul id="cart-list" class="space-y-6 mt-6 overflow-y-auto max-h-96 pr-2">
+          <!-- Cart items will be injected here -->
+        </ul>
+        <div class="mt-6 border-t-2 pt-4">
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-2xl font-bold text-gray-800"
+              >Total: <span id="total-price">$0.00</span></span
+            >
           </div>
-
-          <!-- Side Panel 1: Knowledgeable Team -->
-          <div class="bg-transparent p-6 rounded-lg">
-            <h2 class="text-2xl font-bold text-[#b8945f] mb-4">
-              Our Knowledgeable Team
-            </h2>
-            <p class="text-gray-700 leading-relaxed">
-              Our team of experienced, friendly, and knowledgeable budtenders is
-              always ready to assist you. They can guide you through our
-              extensive menu and offer personalized recommendations based on
-              your preferences and desired effects. Whether you're a seasoned
-              cannabis user or a curious novice, we are here to ensure that your
-              visit is an informative and enjoyable journey into the world of
-              cannabis.
-            </p>
-          </div>
-
-          <!-- Side Panel 2: Quality and Safety -->
-          <div class="bg-transparent p-6 rounded-lg">
-            <h2 class="text-2xl font-bold text-[#b8945f] mb-4">
-              Quality and Safety
-            </h2>
-            <p class="text-gray-700 leading-relaxed">
-              At Mission Cannabis Club, your wellbeing and satisfaction are our
-              top priorities. We are committed to promoting responsible and
-              enjoyable cannabis use while maintaining the highest standards of
-              safety, quality, and efficacy for all our products. Our deep
-              understanding of the cannabis industry drives us to stay at the
-              forefront of new strains, innovative products, and cutting-edge
-              cannabis research.
-            </p>
-          </div>
-
-          <!-- Side Panel 3: Our Story -->
-          <div class="bg-transparent p-6 rounded-lg">
-            <h2 class="text-2xl font-bold text-[#b8945f] mb-4">Our Story</h2>
-            <p class="text-gray-700 leading-relaxed">
-              We also offer free marijuana delivery within San Francisco and
-              surrounding areas, with a minimum order requirement. Whether
-              you’re looking for locally grown strains or cutting-edge cannabis
-              products, we’ve got you covered.
-            </p>
-          </div>
+          <button
+            class="bg-gradient-to-r from-green-400 to-green-600 text-white text-lg font-semibold px-6 py-3 w-full rounded-lg shadow-lg hover:bg-green-700 transition-all transform hover:scale-105"
+          >
+            Checkout
+          </button>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!---------------------OUR TEAM ------------------ -->
-    <section
-      class="min-h-screen flex items-center justify-center bg-white py-12"
-    >
-      <div class="text-center max-w-4xl px-4 sm:px-6 lg:px-8">
-        <!-- Title -->
-        <h1 class="text-4xl font-bold text-gray-900">
-          <span class="text-black">Our </span>
-          <span class="text-[#b8945f]">Knowledgeable Team</span>
-        </h1>
-
-        <!-- Description Text -->
-        <p class="mt-6 text-lg text-gray-600 leading-relaxed">
-          Our team of experienced, friendly, and knowledgeable budtenders is
-          always ready to assist you. They can guide you through our extensive
-          menu and offer personalized recommendations based on your preferences
-          and desired effects.
-        </p>
+    <h1 class="font-mono font-bold text-4xl mt-32 p-4">Bulk Flower List</h1>
+    <div class="container mx-auto p-4">
+      <!-- Product Grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        id="product-container"
+      >
+        <!-- Product cards will be dynamically injected here -->
       </div>
-    </section>
+    </div>
 
     <!------------------- FAQ SECTION --------------------->
     <section id="faq" class="max-w-6xl mx-auto p-4 mt-10">
@@ -721,5 +534,7 @@
         faq.classList.toggle("hidden");
       }
     </script>
+
+    <script src="../js/bulkFlower.js"></script>
   </body>
 </html>

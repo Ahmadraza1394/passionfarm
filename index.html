@@ -51,8 +51,17 @@
 
       <div class="relative">
         <!-- Search Icon -->
-        <button id="search-toggle" class="search-toggletext-white mr-7 focus:outline-none">
+        <button id="search-toggle" class="search-toggle text-white mr-7 focus:outline-none">
           <i class="fas fa-search fa-2x"></i>
+        </button>
+         <!-- Cart Icon -->
+         <button id="cart-btn" class="relative mr-7 focus:outline-none">
+          <i class="fas fa-shopping-cart fa-2x text-white"></i>
+          <span
+            id="cart-count"
+            class="absolute top-0 right-0 bg-yellow-500 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center"
+            >0</span
+          >
         </button>
 
         <!-- Search Input (Initially hidden) -->
@@ -75,7 +84,7 @@
     <!-- Mobile Menu (Hidden by default) -->
     <div
       id="mobile-menu"
-      class=" mobile-menu hidden fixed inset-0 bg-black text-white z-40 flex-col i transition-all duration-1000 ease-in-out max-w-full w-full"
+      class="mobile-menu hidden fixed inset-0 bg-black text-white z-40 flex-col transition-all duration-1000 ease-in-out max-w-full w-full"
     >
       <!-- Close Icon (Hidden initially, shown when the menu is open) -->
       <button
@@ -93,7 +102,7 @@
       <!-- Mobile Menu Links -->
       <ul class="text-3xl space-y-6 ml-10 relative md:text-2xl">
         <!-- Menu item with dropdown -->
-        <li class="relative group">
+        <li class="relative group inline">
           <a href="/" class="hover:text-yellow-500 transition-colors">Shop</a>
           <!-- Dropdown Menu -->
           <ul
@@ -101,26 +110,25 @@
           >
             <li>
               <a
-                href="/"
+                href="./assets/pages/bulkFlower.html"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
                 >Bulk Flower</a
               >
             </li>
             <li>
               <a
-                href="/"
+                href="./assets/pages/disposable.html"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
                 >Disposable</a
               >
             </li>
             <li>
               <a
-                href="/"
+                href="./assets/pages/edibles.html"
                 class="block text-yellow-500 px-2 py-2 hover:bg-gray-800 rounded-xl"
-                >Edibles </a
+                >Edibles</a
               >
             </li>
-           
           </ul>
         </li>
         <!-- Remaining Menu Items -->
@@ -177,16 +185,18 @@
   
 
     <!-----------------------------CATEGORY SECTION  ------------------>
-    <section  class="bg-gray-100 p-8">
+    <section class="bg-gray-100 p-8">
       <!-- Carousel Container -->
       <div class="relative max-w-full overflow-hidden">
+        <h1 class="font-mono font-bold text-4xl">Product Categories</h1>
         <!-- Carousel Items -->
         <div
-          id="carousel-items"
-          class="flex transition-transform duration-500 ease-in-out"
+        id=""
+        class="flex transition-transform duration-500 ease-in-out"
         >
-          <!-- Duplicate of the last item for infinite scroll effect -->
-          <div class="w-full md:w-1/5 flex-none p-4">
+        <!-- Duplicate of the last item for infinite scroll effect -->
+        <div class="w-full md:w-1/5 flex-none p-4">
+            <a href="./assets/pages/bulkFlower.html"  rel="noopener noreferrer">
             <div class="bg-white rounded-lg shadow-md p-6 text-center">
               <img
                 src="./assets/images/logo.JPG"
@@ -195,10 +205,11 @@
               />
               <h3 class="text-lg font-semibold">Bulk Flowers</h3>
             </div>
+            </a>
           </div>
-
-          <!-- Item 1 -->
-          <div class="w-full md:w-1/5 flex-none p-4">
+        <!-- Item 1 -->
+        <div class="w-full md:w-1/5 flex-none p-4">
+            <a href="./assets/pages/disposable.html"  rel="noopener noreferrer">
             <div class="bg-white rounded-lg shadow-md p-6 text-center">
               <img
                 src="./assets/images/bosky.jfif"
@@ -207,10 +218,11 @@
               />
               <h3 class="text-lg font-semibold">Disposable</h3>
             </div>
+            </a>
           </div>
-
-          <!-- Item 2 -->
-          <div class="w-full md:w-1/5 flex-none p-4">
+        <!-- Item 2 -->
+        <div class="w-full md:w-1/5 flex-none p-4">
+            <a href="./assets/pages/edibles.html"  rel="noopener noreferrer">
             <div class="bg-white rounded-lg shadow-md p-6 text-center">
               <img
                 src="./assets/images/concentrates-1.jfif"
@@ -219,175 +231,13 @@
               />
               <h3 class="text-lg font-semibold">Edibles</h3>
             </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="w-full md:w-1/5 flex-none p-4">
-            <div class="bg-white rounded-lg shadow-md p-6 text-center">
-              <img
-                src="./assets/images/edibles-1.jfif"
-                alt="Concentrates"
-                class="mx-auto w-20 h-20 mb-4"
-              />
-              <h3 class="text-lg font-semibold">Concentrates</h3>
-            </div>
-          </div>
-
-          <!-- Item 4 -->
-          <div class="w-full md:w-1/5 flex-none p-4">
-            <div class="bg-white rounded-lg shadow-md p-6 text-center">
-              <img
-                src="./assets/images/edibles-1.jfif"
-                alt="Edibles"
-                class="mx-auto w-20 h-20 mb-4"
-              />
-              <h3 class="text-lg font-semibold">Edibles</h3>
-            </div>
-          </div>
-
-          <!-- Item 5 -->
-          <div class="w-full md:w-1/5 flex-none p-4">
-            <div class="bg-white rounded-lg shadow-md p-6 text-center">
-              <img
-                src="./assets/images/logo.JPG"
-                alt="Tinctures"
-                class="mx-auto w-20 h-20 mb-4"
-              />
-              <h3 class="text-lg font-semibold">Tinctures</h3>
-            </div>
-          </div>
-
-          <!-- Duplicate of the first item for infinite scroll effect -->
-          <div class="w-full md:w-1/5 flex-none p-4">
-            <div class="bg-white rounded-lg shadow-md p-6 text-center">
-              <img
-                src="./assets/images/concentrates-1.jfif"
-                alt="Pre-Rolls"
-                class="mx-auto w-20 h-20 mb-4"
-              />
-              <h3 class="text-lg font-semibold">Pre-Rolls</h3>
-            </div>
-          </div>
-
-          <!-- Item 1 -->
-          <div class="w-full md:w-1/5 flex-none p-4">
-            <div class="bg-white rounded-lg shadow-md p-6 text-center">
-              <img
-                src="./assets/images/bosky.jfif"
-                alt="Pre-Rolls"
-                class="mx-auto w-20 h-20 mb-4"
-              />
-              <h3 class="text-lg font-semibold">Pre-Rolls</h3>
-            </div>
+            </a>
           </div>
         </div>
-
-        <!-- Navigation Buttons (Arrows) -->
-        <button
-          id="prevBtn"
-          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none z-10"
-        >
-          &#8592;
-        </button>
-        <button
-          id="nextBtn"
-          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full focus:outline-none z-10"
-        >
-          &#8594;
-        </button>
       </div>
     </section>
 
-    <!-----------------------PRODUCT CATEGORY1 SECTION -------------------- -->
-    <section class="bg-white p-6 relative">
-      <!-- Carousel Container -->
-      <div class="relative max-w-full overflow-hidden">
-        <h2 class="text-2xl font-bold mb-4">Bulk Flower</h2>
-        <div
-          id="carouselItems1"
-          class="flex transition-transform duration-500 ease-in-out"
-        >
-          <!-- Product Cards will be injected here from the JSON file -->
-        </div>
-      </div>
-
-      <!-- Navigation Buttons -->
-      <div class="absolute inset-0 flex justify-between items-center px-4">
-        <button
-          id="prevBtn1"
-          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
-        >
-          &#8592;
-        </button>
-        <button
-          id="nextBtn1"
-          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
-        >
-          &#8594;
-        </button>
-      </div>
-    </section>
-
-    <!-----------------------PRODUCT CATEGORY2 SECTION -------------------- -->
-    <section class="bg-white p-6 relative">
-      <!-- Carousel Container -->
-      <div class="relative max-w-full overflow-hidden">
-        <h2 class="text-2xl font-bold mb-4">Disposable </h2>
-        <div
-          id="carouselItems2"
-          class="flex transition-transform duration-500 ease-in-out"
-        >
-          <!-- Product Cards will be injected here from the JSON file -->
-        </div>
-      </div>
-
-      <!-- Navigation Buttons -->
-      <div class="absolute inset-0 flex justify-between items-center px-4">
-        <button
-          id="prevBtn2"
-          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
-        >
-          &#8592;
-        </button>
-        <button
-          id="nextBtn2"
-          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
-        >
-          &#8594;
-        </button>
-      </div>
-    </section>
-
-    <!-----------------------PRODUCT CATEGORY3 SECTION -------------------- -->
-    <section class="bg-white p-6 relative">
-      <!-- Carousel Container -->
-      <div class="relative max-w-full overflow-hidden">
-        <h2 class="text-2xl font-bold mb-4">Edibles </h2>
-        <div
-          id="carouselItems3"
-          class="flex transition-transform duration-500 ease-in-out"
-        >
-          <!-- Product Cards will be injected here from the JSON file -->
-        </div>
-      </div>
-
-      <!-- Navigation Buttons -->
-      <div class="absolute inset-0 flex justify-between items-center px-4">
-        <button
-          id="prevBtn3"
-          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
-        >
-          &#8592;
-        </button>
-        <button
-          id="nextBtn3"
-          class="bg-gray-800 text-white p-2 rounded-lg focus:outline-none"
-        >
-          &#8594;
-        </button>
-      </div>
-    </section>
-
+  
     <!--------------------GET IN TOUCH  -------------------->
     <section class="min-h-screen md:p-6 w-full">
       <!-- Container for the whole layout -->
@@ -638,13 +488,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(4)"
         >
           <span class="font-semibold">4. What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq4"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -654,13 +504,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(5)"
         >
           <span class="font-semibold">5. What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq5"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -670,13 +520,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(6)"
         >
           <span class="font-semibold">6. What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq6"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -686,13 +536,13 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(7)"
         >
           <span class="font-semibold">.7 What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq7"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
@@ -702,19 +552,52 @@
       <div class="mb-4">
         <button
           class="faq-question w-full flex justify-between items-center py-4 px-6 bg-gray-100 text-gray-800 rounded-lg shadow focus:outline-none"
-          onclick="toggleFAQ(3)"
+          onclick="toggleFAQ(8)"
         >
           <span class="font-semibold">8. What are your operating hours?</span>
           <span class="faq-icon">⌄</span>
         </button>
         <div
-          id="faq3"
+          id="faq8"
           class="faq-answer bg-white px-6 py-4 text-gray-700 hidden"
         >
           We are open from Monday to Sunday, 9:00 AM to 10:00 PM.
         </div>
       </div>
     </section>
+
+ <!-- Sidebar Cart -->
+ <div
+  id="cart-sidebar"
+  class="fixed z-50 right-0 top-0 w-80 bg-gradient-to-b from-white via-gray-100 to-gray-200 h-full shadow-2xl transform translate-x-full transition-transform"
+>
+  <div class="p-4 relative">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-2">Your Cart</h2>
+    <button
+      id="close-cart"
+      class="absolute top-4 right-4 w-8 h-8 text-gray-500 hover:text-gray-700 transition-colors"
+    >
+      <!-- Font Awesome cross icon -->
+      <i class="fas fa-times fa-2x"></i>
+    </button>
+    <ul id="cart-list" class="space-y-6 mt-6 overflow-y-auto max-h-96 pr-2">
+      <!-- Cart items will be injected here -->
+    </ul>
+    <div class="mt-6 border-t-2 pt-4">
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-2xl font-bold text-gray-800"
+          >Total: <span id="total-price">$0.00</span></span
+        >
+      </div>
+      <button
+        class="bg-gradient-to-r from-green-400 to-green-600 text-white text-lg font-semibold px-6 py-3 w-full rounded-lg shadow-lg hover:bg-green-700 transition-all transform hover:scale-105"
+      >
+        Checkout
+      </button>
+    </div>
+  </div>
+</div>
+
 
     <!-- -------------------AGE VERIFICATION POPUP ------------------->
 
@@ -761,30 +644,71 @@
 
 
     <script>
-      window.onload = function () {
-        const ageModal = document.getElementById("ageModal");
-        const contentWrapper = document.getElementById("contentWrapper");
-        const body = document.body;
+    window.onload = function () {
+  const ageModal = document.getElementById("ageModal");
+  const contentWrapper = document.getElementById("contentWrapper");
+  const body = document.body;
 
-        // Show the age verification modal
-        ageModal.classList.remove("hidden");
+  // Function to get an item from localStorage with expiration check
+  function getItemWithExpiry(key) {
+    const storedItem = localStorage.getItem(key);
+    if (!storedItem) {
+      return null;
+    }
+    const item = JSON.parse(storedItem);
+    const now = new Date();
 
-        // Event listener for 'Yes' button
-        document.getElementById("yesButton").addEventListener("click", () => {
-          ageModal.classList.add("hidden");
-          contentWrapper.classList.remove("blur");
-          body.classList.remove("blur");
-        });
+    // Check if the saved time is expired
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key); // Remove expired item
+      return null;
+    }
+    return item.value;
+  }
 
-        // Event listener for 'No' button
-        document.getElementById("noButton").addEventListener("click", () => {
-          ageModal.classList.add("hidden");
-          contentWrapper.classList.add("blur");
-          body.classList.add("blur");
-          contentWrapper.innerHTML =
-            '<h2 class="text-3xl font-bold text-center mt-10 text-red-500">Access Denied</h2>';
-        });
-      };
+  // Function to set an item in localStorage with an expiration
+  function setItemWithExpiry(key, value, expiryInDays) {
+    const now = new Date();
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryInDays * 24 * 60 * 60 * 1000 // Convert days to milliseconds
+    };
+    localStorage.setItem(key, JSON.stringify(item));
+  }
+
+  // Check if the user has already confirmed age within the last 15 days
+  const isOldEnough = getItemWithExpiry("ageConfirmed");
+
+  if (isOldEnough) {
+    // If the user is old enough and the confirmation is within 15 days, don't show the modal
+    ageModal.classList.add("hidden");
+    contentWrapper.classList.remove("blur");
+    body.classList.remove("blur");
+  } else {
+    // Show the age verification modal
+    ageModal.classList.remove("hidden");
+
+    // Event listener for 'Yes' button
+    document.getElementById("yesButton").addEventListener("click", () => {
+      // Save 'yes' to localStorage for 15 days
+      setItemWithExpiry("ageConfirmed", true, 15);
+
+      ageModal.classList.add("hidden");
+      contentWrapper.classList.remove("blur");
+      body.classList.remove("blur");
+    });
+
+    // Event listener for 'No' button
+    document.getElementById("noButton").addEventListener("click", () => {
+      ageModal.classList.add("hidden");
+      contentWrapper.classList.add("blur");
+      body.classList.add("blur");
+      contentWrapper.innerHTML =
+        '<h2 class="text-3xl font-bold text-center mt-10 text-red-500">Access Denied</h2>';
+    });
+  }
+};
+
     </script>
 
     <style>
@@ -931,5 +855,7 @@ aria-label="Open Chat"
         </div>
       </div>
     </footer>
+
+    <script src="./assets/js/edible.js"></script>
   </body>
 </html>

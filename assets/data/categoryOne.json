@@ -6,7 +6,7 @@
     "thc": "885.31 MG",
     "cbd": "4.07 MG",
     "type": "HYBRID",
-    "image": "./assets/images/logo.JPG"
+    "image": "/assets/images/logo.JPG"
   },
   {
     "name": "UBE Runtz",
@@ -15,7 +15,7 @@
     "thc": "34.27%",
     "cbd": "0.14%",
     "type": "SATIVA",
-    "image": "./assets/images/rove1.jfif"
+    "image": "/assets/images/rove1.jfif"
   },
   {
     "name": "ICC",
@@ -24,7 +24,7 @@
     "thc": "25.66%",
     "cbd": "0.08%",
     "type": "INDICA-HYBRID",
-    "image": "./assets/images/bosky.jfif"
+    "image": "/assets/images/bosky.jfif"
   },
   {
     "name": "Slurty",
@@ -33,7 +33,7 @@
     "thc": "23.07%",
     "cbd": "0.06%",
     "type": "HYBRID",
-    "image": "./assets/images/edibles-1.jfif"
+    "image": "/assets/images/edibles-1.jfif"
   },
   {
     "name": "Oreoz Cake",
@@ -42,7 +42,7 @@
     "thc": "0.69%",
     "cbd": "17.48%",
     "type": "CBD",
-    "image": "./assets/images/kanha.jfif"
+    "image": "/assets/images/kanha.jfif"
   },
   {
     "name": "Platinum OG",
@@ -51,7 +51,7 @@
     "thc": "5.02%",
     "cbd": "N/A",
     "type": "SATIVA",
-    "image": "./assets/images/rove.jfif"
+    "image": "/assets/images/rove.jfif"
   },
   {
     "name": "Grape Gas",
@@ -60,7 +60,7 @@
     "thc": "23.07%",
     "cbd": "0.06%",
     "type": "HYBRID",
-    "image": "./assets/images/edibles-1.jfif"
+    "image": "/assets/images/edibles-1.jfif"
   },
   {
     "name": "Italian Ice",
@@ -69,7 +69,7 @@
     "thc": "885.31 MG",
     "cbd": "4.07 MG",
     "type": "HYBRID",
-    "image": "./assets/images/logo.JPG"
+    "image": "/assets/images/logo.JPG"
   },
   {
     "name": "Mochi Cake",
@@ -78,7 +78,7 @@
     "thc": "34.27%",
     "cbd": "0.14%",
     "type": "SATIVA",
-    "image": "./assets/images/rove1.jfif"
+    "image": "/assets/images/rove1.jfif"
   },
   {
     "name": "Mochi Gelato",
@@ -87,7 +87,7 @@
     "thc": "25.66%",
     "cbd": "0.08%",
     "type": "INDICA-HYBRID",
-    "image": "./assets/images/bosky.jfif"
+    "image": "/assets/images/bosky.jfif"
   },
   {
     "name": "Gelato 47",
@@ -96,7 +96,7 @@
     "thc": "23.07%",
     "cbd": "0.06%",
     "type": "HYBRID",
-    "image": "./assets/images/edibles-1.jfif"
+    "image": "/assets/images/edibles-1.jfif"
   },
   {
     "name": "Gelato 57",
@@ -105,7 +105,7 @@
     "thc": "0.69%",
     "cbd": "17.48%",
     "type": "CBD",
-    "image": "./assets/images/kanha.jfif"
+    "image": "/assets/images/kanha.jfif"
   },
   {
     "name": "Italian Ice",
@@ -114,7 +114,7 @@
     "thc": "5.02%",
     "cbd": "N/A",
     "type": "SATIVA",
-    "image": "./assets/images/rove.jfif"
+    "image": "/assets/images/rove.jfif"
   },
   {
     "name": "Spritzer",
@@ -123,7 +123,7 @@
     "thc": "23.07%",
     "cbd": "0.06%",
     "type": "HYBRID",
-    "image": "./assets/images/edibles-1.jfif"
+    "image": "/assets/images/edibles-1.jfif"
   },
   {
     "name": "Biker Kush",
@@ -132,7 +132,7 @@
     "thc": "885.31 MG",
     "cbd": "4.07 MG",
     "type": "HYBRID",
-    "image": "./assets/images/logo.JPG"
+    "image": "/assets/images/logo.JPG"
   },
   {
     "name": "Strawberry Guava",
@@ -141,7 +141,7 @@
     "thc": "34.27%",
     "cbd": "0.14%",
     "type": "SATIVA",
-    "image": "./assets/images/rove1.jfif"
+    "image": "/assets/images/rove1.jfif"
   },
   {
     "name": "Golden Driller",
@@ -150,7 +150,7 @@
     "thc": "25.66%",
     "cbd": "0.08%",
     "type": "INDICA-HYBRID",
-    "image": "./assets/images/bosky.jfif"
+    "image": "/assets/images/bosky.jfif"
   },
   {
     "name": "Flashbang",
@@ -159,6 +159,6 @@
     "thc": "23.07%",
     "cbd": "0.06%",
     "type": "HYBRID",
-    "image": "./assets/images/edibles-1.jfif"
+    "image": "/assets/images/edibles-1.jfif"
   }
 ]

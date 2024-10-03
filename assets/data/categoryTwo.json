@@ -6,7 +6,7 @@
     "thc": "885.31 MG",
     "cbd": "4.07 MG",
     "type": "HYBRID",
-    "image": "./assets/images/kanha.jfif"
+    "image": "/assets/images/kanha.jfif"
   },
   {
     "name": "2g Fryd Donuts",
@@ -15,7 +15,7 @@
     "thc": "34.27%",
     "cbd": "0.14%",
     "type": "SATIVA",
-    "image": "./assets/images/bosky.jfif"
+    "image": "/assets/images/bosky.jfif"
   },
   {
     "name": "2g WholeMelts",
@@ -24,7 +24,7 @@
     "thc": "25.66%",
     "cbd": "0.08%",
     "type": "INDICA-HYBRID",
-    "image": "./assets/images/rove1.jfif"
+    "image": "/assets/images/rove1.jfif"
   },
   {
     "name": "2g Boom Bars",
@@ -33,7 +33,7 @@
     "thc": "23.07%",
     "cbd": "0.06%",
     "type": "HYBRID",
-    "image": "./assets/images/edibles-1.jfif"
+    "image": "/assets/images/edibles-1.jfif"
   },
   {
     "name": "2g Pack A Punch",
@@ -42,7 +42,7 @@
     "thc": "0.69%",
     "cbd": "17.48%",
     "type": "CBD",
-    "image": "./assets/images/kanha.jfif"
+    "image": "/assets/images/kanha.jfif"
   },
   {
     "name": "3g Favorites",
@@ -50,7 +50,7 @@
     "price": "$13.00",
     "thc": "5.02%",
     "type": "SATIVA",
-    "image": "./assets/images/rove.jfif"
+    "image": "/assets/images/rove.jfif"
   },
   {
     "name": "2g Boom Bars",
@@ -59,7 +59,7 @@
     "thc": "23.07%",
     "cbd": "0.06%",
     "type": "HYBRID",
-    "image": "./assets/images/edibles-1.jfif"
+    "image": "/assets/images/edibles-1.jfif"
   },
   {
     "name": "Shorties (Reps)",
@@ -68,7 +68,7 @@
     "thc": "885.31 MG",
     "cbd": "4.07 MG",
     "type": "HYBRID",
-    "image": "./assets/images/logo.JPG"
+    "image": "/assets/images/logo.JPG"
   },
   {
     "name": "3g Favorites",
@@ -76,6 +76,6 @@
     "price": "$13.00",
     "thc": "5.02%",
     "type": "SATIVA",
-    "image": "./assets/images/rove.jfif"
+    "image": "/assets/images/rove.jfif"
   }
 ]
